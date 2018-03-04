@@ -1,0 +1,16 @@
+.Footer {
+  background-color: $white;
+  display: block;
+  height: $footer-height;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: $unit * 2 $unit * 4;
+  text-align: center;
+  width: 100%;
+
+  & > * {
+    color: $gray;
+    font-size: 0.8em;
+    margin: $unit * 4 auto;
+  }
+}

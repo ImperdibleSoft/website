@@ -1,0 +1,61 @@
+.List {
+  margin: $unit * 5 auto;
+  text-align: left;
+
+  &-item {
+    margin-left: $unit * 4;
+    vertical-align: top;
+
+    &,
+    & a {
+      cursor: default;
+    }
+
+    a {
+      color: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &-desc {
+    display: block;
+    font-size: 1em;
+  }
+
+  &--iconic {
+    font-size: 2em;
+    list-style: none;
+    margin: $unit * 2 auto;
+    text-align: center;
+    width: 100%;
+
+    &,
+    .List-item {
+      display: inline-block;
+    }
+
+    .List-item {
+      margin: $unit * 3 0;
+      padding: 0 $unit * 2;
+      width: 50%;
+
+      @media screen and (min-width: 420px) {
+        width: 33%;
+      }
+
+      @media screen and (min-width: 540px) {
+        width: 25%;
+      }
+
+      @media screen and (min-width: 720px) {
+        margin: $unit * 6;
+        width: auto;
+      }
+    }
+
+    .List-desc {
+      font-size: 0.5em;
+    }
+  }
+}

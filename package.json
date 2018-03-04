@@ -1,0 +1,52 @@
+{
+  "name": "imperdiblesoft.com",
+  "version": "1.0.0",
+  "description": "Project to create a new, simple and easy to use website with my professional profilet",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:client": "webpack --config webpack/prod.config.babel.js",
+    "build:server": "webpack --config webpack/server.config.babel.js",
+    "build": "npm run clean && npm run build:client && npm run build:server",
+    "serve:dev": "webpack-dev-server --host 0.0.0.0 --config webpack/dev.config.babel.js",
+    "serve:prod": "npm run build && node dist/server.js",
+    "start": "npm run serve:dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.6.0",
+    "node-sass": "^4.7.2",
+    "node-sass-json-importer": "^3.1.4",
+    "postcss-loader": "^2.1.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
+    "@fortawesome/react-fontawesome": "0.0.17",
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-slick": "^0.19.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
