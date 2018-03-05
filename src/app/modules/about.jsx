@@ -97,9 +97,9 @@ const AboutMe = () => (
       <div className="App-side is-large">
         {/* Slider with some pics (smartwatch, monocycle, assassins creed, google glass, manapp screenshot, world of warcraft, drone) */}
         <Slider {...slick} className="Slider">
-          {pictures.map(pic => {
+          {pictures.map((pic, index) => {
             return (
-              <div className="Slide"><img src={pic} className="Slide-image" /></div>
+              <div key={`slide-${index}`} className="Slide"><img src={pic} className="Slide-image" /></div>
             );
           })}
         </Slider>
