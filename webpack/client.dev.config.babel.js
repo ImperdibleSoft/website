@@ -2,6 +2,7 @@ import path from 'path';
 import webpack from 'webpack';
 import jsonImporter from 'node-sass-json-importer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import updateAssets from './utils/update-assets';
 import postcssConfig from '../postcss.config';
@@ -24,6 +25,7 @@ const regex = {
 const loaderPostCSS = {
   loader: 'postcss-loader',
   options: {
+    ident: 'postcss',
     sourceMap: true,
     plugins: [ ...postcssConfig.plugins ],
   },
@@ -121,18 +123,17 @@ const baseConfig = {
         test: regex.css,
         include: paths.src,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'style-loader',
-            options: { sourceMap: true },
-          },
-          {
-            loader: 'css-loader',
-            options: { sourceMap: true },
-          },
-          loaderPostCSS,
-          loaderSass,
-        ],
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: { sourceMap: true },
+            },
+            loaderPostCSS,
+            loaderSass,
+          ],
+        }),
       },
 
       // JSX
@@ -168,6 +169,10 @@ const baseConfig = {
       'process.env': {
         NODE_ENV: JSON.stringify('dev'),
       },
+    }),
+
+    new ExtractTextPlugin({
+      filename: '[name]-[hash].min.css',
     }),
 
     function updateAssetsWhenReady() {

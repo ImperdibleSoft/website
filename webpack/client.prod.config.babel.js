@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import jsonImporter from 'node-sass-json-importer';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import updateAssets from './utils/update-assets';
 import postcssConfig from '../postcss.config';
@@ -21,6 +22,10 @@ const prodConfig = {
       'process.env': {
         NODE_ENV: JSON.stringify('prod'),
       },
+    }),
+
+    new ExtractTextPlugin({
+      filename: '[name]-[hash].min.css',
     }),
 
     function updateAssetsWhenReady() {
