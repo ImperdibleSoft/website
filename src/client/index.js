@@ -12,12 +12,19 @@ import '../images/favicons/favicon.ico';
 // Get custom styles
 import '../styles/main';
 
+// Service worker
+import initWebApp from './sw';
+
 // Get the URL of the file
-import config from '../config';
+// import config from '../config';
 
 import AppComponent from 'App/app';
 import ScrollTop from 'App/components/scroll-top';
 
+// Init service worker
+initWebApp();
+
+// Init web app
 ReactDom.render(
   <BrowserRouter>
     <ScrollTop>
