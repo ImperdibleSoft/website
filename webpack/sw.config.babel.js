@@ -13,14 +13,12 @@ const regex = {
 };
 
 const wsConfig = {
-  devtool: 'source-map',
-
   entry: path.resolve(paths.src, 'service-worker.js'),
 
   output: {
-    path: paths.dist,
+    path: path.resolve(paths.dist, 'assets'),
     filename: 'service-worker.js',
-    publicPath: '/',
+    publicPath: '/assets/',
   },
 
   module: {
@@ -31,9 +29,6 @@ const wsConfig = {
         include: paths.src,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          sourceMap: true,
-        },
       },
     ],
   },

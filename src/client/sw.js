@@ -1,3 +1,5 @@
+let worker;
+
 // Init webapp things
 const initWebApp = () => {
   // Register Service Worker
