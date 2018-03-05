@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { regex } from '../client.dev.config.babel';
 
 const filePath = path.resolve(__dirname, './assets.json');
 
@@ -30,7 +31,7 @@ function updateAssets (assets) {
   const scripts = getAssets(/\.js$/);
   const styles = getAssets(/\.css$/);
 
-  const imagesRegex = /\.(jpe?g|png|gif|svg)$/;
+  const imagesRegex = regex.img;
   const images = assetsJson.modules
     .filter(module => imagesRegex.test(module.name))
     .map((image) => {
