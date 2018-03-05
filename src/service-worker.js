@@ -9,6 +9,9 @@ debug(`Loading v${version}`);
 
 // Gett assets that needs to be cached
 const savedAssets = [
+  '/',
+  '/src/manifest.json',
+  '/src/browserconfig.xml',
   ...assets.scripts,
   ...assets.styles,
   ...assets.images.map(img => img.compiled),
@@ -63,6 +66,9 @@ self.addEventListener('fetch', (e) => {
   } else {
     return fetch(e.request);
   }
+}, (error) => {
+  debug('There was an error while fetching');
+  debug(error);
 });
 
 function debug(param) {
