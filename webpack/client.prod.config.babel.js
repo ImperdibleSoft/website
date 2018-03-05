@@ -10,11 +10,7 @@ import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from
 const prodConfig = {
   entry: baseConfig.entry,
   
-  output: {
-    path: path.resolve(baseConfig.output.path, 'assets'),
-    filename: baseConfig.output.filename,
-    publicPath: '/assets/',
-  },
+  output: baseConfig.output,
 
   module: baseConfig.module,
 
