@@ -17,7 +17,9 @@ const regex = {
   img: /\.(png|jpe?g|JPE?G|gif|ico|svg)$/,
   fonts: /\.(woff|woff2|ttf|eot|svg)$/,
   html: /\.html$/,
-}
+  json: /\.json$/,
+  manifest: /manifest\.json|browserconfig\.xml$/
+};
 
 const loaderPostCSS = {
   loader: 'postcss-loader',
@@ -104,6 +106,16 @@ const baseConfig = {
         },
       },
 
+      // Manifest
+      {
+        test: regex.manifest,
+        include: paths.src,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+
       // CSS
       {
         test: regex.css,
@@ -136,7 +148,7 @@ const baseConfig = {
 
       // HTML
       {
-        test: /.html$/,
+        test: regex.html,
         include: paths.src,
         exclude: /node_modules/,
         loader: 'html-loader',

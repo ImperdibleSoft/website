@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
-// Get custom styles
-import '../styles/main';
+// Get manifest
+import '../manifest';
+import '../browserconfig.xml';
 
 // Get favicon
-import '../images/favicon.ico';
+import '../images/favicons/favicon.ico';
+
+// Get custom styles
+import '../styles/main';
 
 // Get the URL of the file
 import config from '../config';
