@@ -1,0 +1,12 @@
+{
+  "name": "ImperdibleSoft",
+  "short_name": "ImperdibleSoft",
+  "description": "Proffessional profile of Rafael Pérez García",
+  "version": "7.0.0",
+  "author": "Rafael Pérez García",
+  "start_url": "/",
+  "theme_color": "#2b8d17",
+  "background_color": "#2b8d17",
+  "display": "standalone",
+  "orientation": "any"
+}

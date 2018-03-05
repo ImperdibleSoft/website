@@ -8,6 +8,9 @@ import '../styles/main';
 // Get favicon
 import '../images/favicon.ico';
 
+// Get manifest
+import manifest from '../manifest';
+
 // Get the URL of the file
 import config from '../config';
 

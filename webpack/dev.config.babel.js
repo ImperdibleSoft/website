@@ -17,7 +17,8 @@ const regex = {
   img: /\.(png|jpe?g|JPE?G|gif|ico|svg)$/,
   fonts: /\.(woff|woff2|ttf|eot|svg)$/,
   html: /\.html$/,
-}
+  json: /\.json$/,
+};
 
 const loaderPostCSS = {
   loader: 'postcss-loader',
@@ -136,10 +137,20 @@ const baseConfig = {
 
       // HTML
       {
-        test: /.html$/,
+        test: regex.html,
         include: paths.src,
         exclude: /node_modules/,
         loader: 'html-loader',
+      },
+
+      // JSON (manifest)
+      {
+        test: regex.json,
+        include: paths.src,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
       },
     ],
   },
