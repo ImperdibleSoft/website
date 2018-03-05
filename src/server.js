@@ -4,16 +4,15 @@ import { StaticRouter } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 
 import index from './index.html';
-import assets from './assets.json';
+import assets from '../webpack/utils/assets.json';
 
-const styles = assets.styles && assets.styles[0];
 const scripts = assets.scripts && assets.scripts[0];
+const styles = assets.styles && assets.styles[0];
 
 import AppComponent from 'App/app';
 
 const render = (req, res) => {
   const context = {};
-  console.log('Url:', req.url);
 
   const html = ReactDOMServer.renderToString(
     <StaticRouter
