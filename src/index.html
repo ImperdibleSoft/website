@@ -1,14 +1,53 @@
 <!doctype html>
 <html>
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 
-    <base href="/">
-    <link rel="shortcut icon" href="/src/images/favicon.ico" />
+    <!-- Standard -->
+    <link rel="shortcut icon" href="/src/images/favicons/favicon.ico" />
     <title>ImperdibleSoft</title>
     <meta name="description" content="Proffessional profile of Rafael Pérez García" />
 
+    <!-- PWA Stuff -->
+    <link rel="manifest" href="/src/manifest.json" />
+    <!-- <meta name="msapplication-config" content="/browserconfig.xml" /> -->
+
+    <meta style="display: none" name="mobile-web-app-capable" content="yes" />
+    <meta style="display: none" name="apple-mobile-web-app-capable" content="yes" />
+
+    <link style="display: none" rel="shortcut icon" href="/src/images/logo.png" />
+
+    <!-- Windows -->
+    <!-- <meta style="display: none" name="msapplication-config" content="browserconfig.xml"> -->
+    <meta style="display: none" name="msapplication-TileColor" content="#2b8d17" />
+    <!-- <meta style="display: none" name="msapplication-TileImage" content="/src/images/favicons/msapplication-tile-144x144.png" sizes="144x144" /> -->
+
+    <!-- iOS -->
+    <!-- https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <!-- <link style="display: none" rel="mask-icon" href="/src/images/favicons/apple-touch-icon.svg" color="#273238" /> -->
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon.png" />
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon-180x180.png" sizes="180x180" />
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon-167x167.png" sizes="167x167" />
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon-152x152.png" sizes="152x152" />
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon-120x120.png" sizes="120x120" />
+    <link style="display: none" rel="apple-touch-icon" href="/src/images/favicons/apple-touch-icon-76x76.png" sizes="76x76" />
+
+    <!-- Chrome -->
+    <!-- https://developer.chrome.com/multidevice/android/installtohomescreen -->
+    <link style="display: none" rel="icon" href="/src/images/favicons/android-chrome-192x192.png" sizes="192x192" />
+    <link style="display: none" rel="icon" href="/src/images/favicons/android-chrome-128x128.png" sizes="128x128" />
+
+    <!--Android -->
+    <!-- https://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html -->
+    <meta style="display: none" name="theme-color" content="#2b8d17">
+    <link style="display: none" rel="icon" href="/src/images/favicons/favicon-96x96.png" sizes="96x96" />
+    <link style="display: none" rel="icon" href="/src/images/favicons/favicon-72x72.png" sizes="72x72" />
+    <link style="display: none" rel="icon" href="/src/images/favicons/favicon-48x48.png" sizes="48x48" />
+    <link style="display: none" rel="icon" href="/src/images/favicons/favicon-36x36.png" sizes="36x36" />
+
+    <!-- Metas -->
     <!-- 	Facebook  -->
     <meta property="og:site_name" content="ImperdibleSoft" />
     <meta property="og:type" content="website" />
@@ -33,43 +72,6 @@
     <meta itemprop="description" content="Proffessional profile of Rafael Pérez García" />
     <meta itemprop="thumbnail" content="http://schema.org/ImageObject" />
     <meta itemprop="thumbnailUrl" content="http://www.imperdiblesoft.com/src/images/logo.png" />
-
-    <!-- PWA Stuff -->
-    <link rel="manifest" href="/src/manifest.json" />
-    <!-- <meta name="msapplication-config" content="/browserconfig.xml" /> -->
-
-    <meta style="display: none" name="mobile-web-app-capable" content="yes" />
-    <meta style="display: none" name="apple-mobile-web-app-capable" content="yes" />
-
-    <link style="display: none" rel="shortcut icon" href="/src/images/logo.png" />
-
-    <!-- Windows -->
-    <!-- <meta style="display: none" name="msapplication-config" content="browserconfig.xml"> -->
-    <meta style="display: none" name="msapplication-TileColor" content="#2b8d17" />
-    <!-- <meta style="display: none" name="msapplication-TileImage" content="images/favicons/msapplication-tile-144x144.png" sizes="144x144" /> -->
-
-    <!-- iOS -->
-    <!-- https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
-    <!-- <link style="display: none" rel="mask-icon" href="images/favicons/apple-touch-icon.svg" color="#273238" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon-180x180.png" sizes="180x180" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon-167x167.png" sizes="167x167" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon-152x152.png" sizes="152x152" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon-120x120.png" sizes="120x120" /> -->
-    <!-- <link style="display: none" rel="apple-touch-icon" href="images/favicons/apple-touch-icon-76x76.png" sizes="76x76" /> -->
-
-    <!-- Chrome -->
-    <!-- https://developer.chrome.com/multidevice/android/installtohomescreen -->
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-192x192.png" sizes="192x192" /> -->
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-128x128.png" sizes="128x128" /> -->
-
-    <!--Android -->
-    <!-- https://developer.android.com/guide/practices/ui_guidelines/icon_design_launcher.html -->
-    <meta style="display: none" name="theme-color" content="#2b8d17">
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-96x96.png" sizes="96x96" /> -->
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-72x72.png" sizes="72x72" /> -->
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-48x48.png" sizes="48x48" /> -->
-    <!-- <link style="display: none" rel="icon" href="images/favicons/favicon-36x36.png" sizes="36x36" /> -->
 
     <style></style>
   </head>
