@@ -18,6 +18,7 @@ const regex = {
   fonts: /\.(woff|woff2|ttf|eot|svg)$/,
   html: /\.html$/,
   json: /\.json$/,
+  manifest: /manifest\.json|browserconfig\.xml$/
 };
 
 const loaderPostCSS = {
@@ -105,6 +106,16 @@ const baseConfig = {
         },
       },
 
+      // Manifest
+      {
+        test: regex.manifest,
+        include: paths.src,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+
       // CSS
       {
         test: regex.css,
@@ -141,16 +152,6 @@ const baseConfig = {
         include: paths.src,
         exclude: /node_modules/,
         loader: 'html-loader',
-      },
-
-      // JSON (manifest)
-      {
-        test: regex.json,
-        include: paths.src,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
       },
     ],
   },
