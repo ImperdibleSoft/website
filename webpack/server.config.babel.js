@@ -18,7 +18,7 @@ const prodConfig = {
   
   externals: [nodeExternals()],
   
-  entry: path.resolve(paths.src, 'server.js'),
+  entry: path.resolve(paths.src, 'server'),
   
   output: {
     path: paths.dist,
