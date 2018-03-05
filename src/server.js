@@ -4,16 +4,19 @@ import { StaticRouter } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 
 import index from './index.html';
-import assets from './assets.json';
+import assets from '../webpack/utils/assets.json';
 
-const styles = assets.styles && assets.styles[0];
+// Get all favicons
+// IMPORTANT: This require is making favicons work. Do not remove
+require.context('./images/favicons/', false, /\.(png|jpe?g|JPE?G|gif|ico|svg)$/);
+
 const scripts = assets.scripts && assets.scripts[0];
+const styles = assets.styles && assets.styles[0];
 
 import AppComponent from 'App/app';
 
 const render = (req, res) => {
   const context = {};
-  console.log('Url:', req.url);
 
   const html = ReactDOMServer.renderToString(
     <StaticRouter
@@ -50,8 +53,24 @@ const render = (req, res) => {
 const server = express();
 
 // Serve assets
-server.use(express.static('dist/assets'));
-server.use('/assets', express.static('dist/assets'));
+// Custom scripts
+if (scripts && scripts.length) {
+  server.use(`${scripts}`, express.static(`dist${scripts}`));
+}
+
+// Custom styles
+if (styles && styles.length) {
+  server.use(`${styles}`, express.static(`dist${styles}`));
+}
+
+// Custom assets
+server.use('/src', express.static('dist/src'));
+
+// External assets
+server.use('/node_modules', express.static('dist/node_modules'));
+
+// Custom assets
+server.use('/service-worker.js', express.static('dist/src/service-worker.js'));
 
 // Serve pages
 server.use('*', render);

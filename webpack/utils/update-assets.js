@@ -1,21 +1,37 @@
 import fs from 'fs';
 import path from 'path';
+import { regex } from '../client.dev.config.babel';
 
-const filePath = path.resolve(__dirname, '../../src/assets.json');
+const filePath = path.resolve(__dirname, './assets.json');
 
 function updateAssets (assets) {
   const publicPath = this.options.output.publicPath;
   const assetsJson = assets.toJson();
 
-  const getAssets = ext =>
-    assetsJson.assetsByChunkName.main
+  const getAssets = ext => {
+    const assetsName = assetsJson.assetsByChunkName.main;
+
+    // There is only 1 file
+    if (typeof assetsName === 'string') {
+      // Match the asset tipe
+      if (ext.test(assetsName)) {
+        return [`${publicPath}${assetsName}`];
+      }
+
+      // It's not a valid type
+      return [];
+    }
+
+    // There is more than 1 file
+    return assetsName
       .filter(asset => ext.test(asset))
       .map(asset => `${publicPath}${asset}`);
+  }
 
   const scripts = getAssets(/\.js$/);
   const styles = getAssets(/\.css$/);
 
-  const imagesRegex = /\.(jpe?g|png|gif|svg)$/;
+  const imagesRegex = regex.img;
   const images = assetsJson.modules
     .filter(module => imagesRegex.test(module.name))
     .map((image) => {

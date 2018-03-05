@@ -1,0 +1,31 @@
+{
+  "name": "ImperdibleSoft",
+  "short_name": "ImperdibleSoft",
+  "description": "Proffessional profile of Rafael Pérez García",
+  "author": "Rafael Pérez García",
+
+  "version": "7.0.0",
+
+  "start_url": "/",
+  "theme_color": "#2b8d17",
+  "background_color": "#2b8d17",
+  "display": "standalone",
+  "orientation": "any",
+
+  "icons": [
+    { "type": "image/png", "sizes": "256x256", "src": "images/favicons/apple-touch-icon.png" },
+    { "type": "image/png", "sizes": "180x180", "src": "images/favicons/apple-touch-icon-180x180.png" },
+    { "type": "image/png", "sizes": "167x167", "src": "images/favicons/apple-touch-icon-167x167.png" },
+    { "type": "image/png", "sizes": "152x152", "src": "images/favicons/apple-touch-icon-152x152.png" },
+    { "type": "image/png", "sizes": "120x120", "src": "images/favicons/apple-touch-icon-120x120.png" },
+    { "type": "image/png", "sizes": "76x76", "src": "images/favicons/apple-touch-icon-76x76.png" },
+
+    { "type": "image/png", "sizes": "192x192", "src": "images/favicons/android-chrome-192x192.png" },
+    { "type": "image/png", "sizes": "128x128", "src": "images/favicons/android-chrome-128x128.png" },
+
+    { "type": "image/png", "sizes": "96x96", "src": "images/favicons/favicon-96x96.png" },
+    { "type": "image/png", "sizes": "72x72", "src": "images/favicons/favicon-72x72.png" },
+    { "type": "image/png", "sizes": "48x48", "src": "images/favicons/favicon-48x48.png" },
+    { "type": "image/png", "sizes": "36x36", "src": "images/favicons/favicon-36x36.png" }
+  ]
+}

@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import jsonImporter from 'node-sass-json-importer';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+import updateAssets from './utils/update-assets';
 import postcssConfig from '../postcss.config';
 
 const paths = {
@@ -12,12 +13,13 @@ const paths = {
 }
 
 const regex = {
-  js: /\.jsx?$/,
-  css: /\.s?css$/,
   img: /\.(png|jpe?g|JPE?G|gif|ico|svg)$/,
   fonts: /\.(woff|woff2|ttf|eot|svg)$/,
+  manifest: /manifest\.json|browserconfig\.xml$/,
+  css: /\.s?css$/,
+  js: /\.jsx?$/,
   html: /\.html$/,
-}
+};
 
 const loaderPostCSS = {
   loader: 'postcss-loader',
@@ -104,6 +106,16 @@ const baseConfig = {
         },
       },
 
+      // Manifest
+      {
+        test: regex.manifest,
+        include: paths.src,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+        },
+      },
+
       // CSS
       {
         test: regex.css,
@@ -136,7 +148,7 @@ const baseConfig = {
 
       // HTML
       {
-        test: /.html$/,
+        test: regex.html,
         include: paths.src,
         exclude: /node_modules/,
         loader: 'html-loader',
@@ -157,6 +169,10 @@ const baseConfig = {
         NODE_ENV: JSON.stringify('dev'),
       },
     }),
+
+    function updateAssetsWhenReady() {
+      this.plugin('done', updateAssets);
+    },
 
     new HtmlWebpackPlugin({
       template: 'src/index.html'
