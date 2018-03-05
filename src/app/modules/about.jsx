@@ -86,9 +86,10 @@ const AboutMe = () => (
         <p>Some of my main hobbies are:</p>
         <ul className="List">
           <li className="List-item">Any tech stuff</li>
-          <li className="List-item">Videogames</li>
           <li className="List-item">Coding</li>
           <li className="List-item">Visual Design, UX</li>
+          <li className="List-item">Traveling</li>
+          <li className="List-item">Videogames</li>
           <li className="List-item">Racing Drones</li>
         </ul>
       </div>
