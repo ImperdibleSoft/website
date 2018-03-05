@@ -3,12 +3,13 @@ import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import ReactDOMServer from 'react-dom/server';
 
-import index from './index.html';
-import assets from '../webpack/utils/assets.json';
+import index from '../index.html';
+import assets from '../../webpack/utils/assets.json';
+import messengerWebhook from './messenger';
 
 // Get all favicons
 // IMPORTANT: This require is making favicons work. Do not remove
-require.context('./images/favicons/', false, /\.(png|jpe?g|JPE?G|gif|ico|svg)$/);
+require.context('../images/favicons/', false, /\.(png|jpe?g|JPE?G|gif|ico|svg)$/);
 
 const scripts = assets.scripts && assets.scripts[0];
 const styles = assets.styles && assets.styles[0];
@@ -50,7 +51,7 @@ const render = (req, res) => {
 }
 
 // Create the server
-const server = express();
+let server = express();
 
 // Serve assets
 // Custom scripts
@@ -71,6 +72,8 @@ server.use('/node_modules', express.static('dist/node_modules'));
 
 // Custom assets
 server.use('/service-worker.js', express.static('dist/src/service-worker.js'));
+
+server = messengerWebhook(server);
 
 // Serve pages
 server.use('*', render);

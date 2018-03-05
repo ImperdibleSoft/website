@@ -2,7 +2,7 @@
   "name": "imperdiblesoft.com",
   "description": "Project to create a new, simple and easy to use website with my professional profile",
   "author": "Rafael Pérez García",
-  "version": "7.0.1",
+  "version": "7.0.2",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
