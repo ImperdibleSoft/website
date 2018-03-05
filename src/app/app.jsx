@@ -4,6 +4,7 @@ import Header from './shell/header';
 import Footer from './shell/footer';
 import Support from './components/support';
 import Contact from './components/contact';
+import Messenger from './components/messenger';
 
 import Router from './router';
 
@@ -22,6 +23,7 @@ class App extends React.Component {
         </div>
 
         <Footer />
+        <Messenger />
       </div>
     );
   }
