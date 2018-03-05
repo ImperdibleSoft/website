@@ -16,9 +16,9 @@ const wsConfig = {
   entry: path.resolve(paths.src, 'service-worker.js'),
 
   output: {
-    path: path.resolve(paths.dist, 'assets'),
+    path: path.resolve(paths.dist, 'src'),
     filename: 'service-worker.js',
-    publicPath: '/assets/',
+    publicPath: '/src/',
   },
 
   module: {
