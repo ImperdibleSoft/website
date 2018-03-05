@@ -1,14 +1,15 @@
 {
   "name": "imperdiblesoft.com",
-  "version": "1.0.0",
-  "description": "Project to create a new, simple and easy to use website with my professional profilet",
+  "version": "7.0.0",
+  "description": "Project to create a new, simple and easy to use website with my professional profile",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build:client": "webpack --config webpack/prod.config.babel.js",
+    "build:sw": "webpack --config webpack/sw.config.babel.js",
+    "build:client": "webpack --config webpack/client.prod.config.babel.js",
     "build:server": "webpack --config webpack/server.config.babel.js",
-    "build": "npm run clean && npm run build:client && npm run build:server",
-    "serve:dev": "webpack-dev-server --host 0.0.0.0 --config webpack/dev.config.babel.js",
+    "build": "npm run clean && npm run build:sw && npm run build:client && npm run build:server",
+    "serve:dev": "webpack-dev-server --host 0.0.0.0 --config webpack/client.dev.config.babel.js",
     "serve:prod": "npm run build && node dist/server.js",
     "start": "npm run serve:dev"
   },

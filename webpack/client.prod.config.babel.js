@@ -5,7 +5,7 @@ import jsonImporter from 'node-sass-json-importer';
 import updateAssets from './utils/update-assets';
 import postcssConfig from '../postcss.config';
 
-import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from './dev.config.babel';
+import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from './client.dev.config.babel';
 
 const prodConfig = {
   entry: baseConfig.entry,

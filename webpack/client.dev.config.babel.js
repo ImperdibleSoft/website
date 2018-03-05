@@ -17,7 +17,6 @@ const regex = {
   img: /\.(png|jpe?g|JPE?G|gif|ico|svg)$/,
   fonts: /\.(woff|woff2|ttf|eot|svg)$/,
   html: /\.html$/,
-  json: /\.json$/,
   manifest: /manifest\.json|browserconfig\.xml$/
 };
 
