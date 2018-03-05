@@ -5,7 +5,13 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import nodeExternals from 'webpack-node-externals';
 import postcssConfig from '../postcss.config';
 
-import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from './dev.config.babel';
+import baseConfig, {
+  paths,
+  regex,
+  loaderPostCSS,
+  loaderSass,
+  loaderImages,
+} from './client.dev.config.babel';
 
 const prodConfig = {
   target: 'node',

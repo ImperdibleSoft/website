@@ -5,16 +5,12 @@ import jsonImporter from 'node-sass-json-importer';
 import updateAssets from './utils/update-assets';
 import postcssConfig from '../postcss.config';
 
-import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from './dev.config.babel';
+import baseConfig, {paths, regex, loaderPostCSS, loaderSass, loaderImages } from './client.dev.config.babel';
 
 const prodConfig = {
   entry: baseConfig.entry,
   
-  output: {
-    path: path.resolve(paths.dist, 'assets'),
-    filename: baseConfig.output.filename,
-    publicPath: '/assets/',
-  },
+  output: baseConfig.output,
 
   module: baseConfig.module,
 

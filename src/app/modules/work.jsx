@@ -92,7 +92,7 @@ const Work = () => (
     <div className="App-section">
       <h1 className="Heading">My personal projects</h1>
 
-      <p>As any <span class="bold">curious</span> or <span class="bold">restless</span> person, I tend to be doing something all the time. This helps me to <span className="bold">keep learning</span>, <span className="bold">discover new things</span> and prevent me to <span className="bold">get stucked</span>.</p>
+      <p>As any <span className="bold">curious</span> or <span className="bold">restless</span> person, I tend to be doing something all the time. This helps me to <span className="bold">keep learning</span>, <span className="bold">discover new things</span> and prevent me to <span className="bold">get stucked</span>.</p>
 
       <p>This has pushed me to create several projects, but I'm going to mention just few of them.</p>
 
