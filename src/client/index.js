@@ -6,9 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import '../manifest';
 import '../browserconfig.xml';
 
-// Get favicon
-import '../images/favicons/favicon.ico';
-
 // Get custom styles
 import '../styles/main';
 
