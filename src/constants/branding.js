@@ -12,3 +12,5 @@ export const FACEBOOK = '';
 export const TWITTER = 'https://www.twitter.com/ImperdibleSoft';
 export const YOUTUBE = 'https://www.youtube.com/channel/UC_Dcon2LsoS_Aa_jbsgnskg';
 export const TWITCH = 'https://www.twitch.tv/lordfido';
+
+export const ANALYTICS_TAG = 'UA-41472956-10';

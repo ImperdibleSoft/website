@@ -1,4 +1,7 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+
+import { ANALYTICS_TAG } from '../constants/branding';
 
 import Header from './shell/header';
 import Footer from './shell/footer';
@@ -8,6 +11,25 @@ import Messenger from './components/messenger';
 
 import Router from './router';
 
+const { NODE_ENV: ENV } = process.env;
+
+// If not in development
+if (ENV !== 'dev') {
+  // Init Google Analytics
+  ReactGA.initialize(ANALYTICS_TAG);
+}
+
+// Location change handler
+const logPageView = () => {
+  // If not in development
+  if (ENV !== 'dev') {
+
+    // Update page stats
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }
+};
+
 class App extends React.Component {
   render () {
     return (
@@ -15,7 +37,7 @@ class App extends React.Component {
         <Header />
 
         <div className="App-content">
-          <Router />
+          <Router onUpdate={logPageView} />
 
           <Support />
 
