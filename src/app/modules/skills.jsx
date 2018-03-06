@@ -5,14 +5,14 @@ import { faLaptop, faMobileAlt, faTasks, faFighterJet, faSync } from '@fortaweso
 import { faCheckCircle } from '@fortawesome/fontawesome-free-regular';
 import { faHtml5, faCss3Alt, faJs, faReact, faAngular, faVuejs, faGit, faNodeJs, faGulp, faGrunt, faSass, faPhp, faLinux, faChrome, faGithub } from '@fortawesome/fontawesome-free-brands';
 
-// ES6, redux, knockout, backbone, yarn, webpack, eslint, stylelint, karma, jasmine, electron, VS Code, 
+import { JOB } from '../../constants/branding';
 
 const Skills = () => (
   <div className="Skills">
     <div className="App-section">
       <h1 className="Heading">Technical Skills</h1>
 
-      <p>As <span className="bold">Frontend</span> developer, I'm able to build web apps, but I'm also able to automatize and setup enviroments and proccesses.</p>
+      <p>As <span className="bold">{JOB}</span>, I'm able to build web apps, but I'm also able to automatize and setup enviroments and proccesses.</p>
       
       <h5 className="Heading Heading--xs">Frontend related</h5>
       <ul className="List List--iconic">
@@ -197,7 +197,7 @@ const Skills = () => (
     <div className="App-section">
       <h1 className="Heading">Personal Skills</h1>
 
-      <p>Being a developer is not just about tech and computers. It's about being social, a <span className="bold">Team member</span>.</p>
+      <p>Being a {JOB} is not just about tech and computers. It's about being social, a <span className="bold">Team member</span>.</p>
       <p>Having good social skills also helps to develop better and faster, by <span className="bold">asking to workmates</span>, <span className="bold">helping people</span>, or <span className="bold">learning from others</span>.</p>
 
       <div className="App-side">
