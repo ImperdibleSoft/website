@@ -57,7 +57,7 @@ const Work = () => (
           <h3 className="Heading Heading--xs">Samyroad</h3>
           <p><FA icon={faCalendar} className="is-imperdible" /> 2016 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES</p>
 
-          <p>I decided to move to <span className="bold">Samyroad</span> because the had a really innovative stack, and I thought it was time for me to upgrade my skills.</p>
+          <p>I decided to move to <span className="bold">Samyroad</span> because they had a really innovative stack, and I thought it was time for me to upgrade my skills.</p>
           <p>While working on this company, I kept using some already-known libraries, such as <span className="bold is-karma">Karma</span>, <span className="bold is-jasmine">Jasmine</span> and <span className="bold is-sass">Sass</span>.</p>
           <p>I also was able to learn some new interesting things, such as <span className="bold is-webpack">Webpack</span>, <span className="bold is-react">ReactJS</span>, <span className="bold is-redux">Redux</span>, <span className="bold">Eslint</span> and <span className="bold">Stylelint</span>.</p>
         </div>

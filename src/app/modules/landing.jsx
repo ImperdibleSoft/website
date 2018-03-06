@@ -5,6 +5,7 @@ import { faFilePdf } from '@fortawesome/fontawesome-free-regular';
 import { faReact, faAngular, faVuejs, faSass, faNodeJs, faGit } from '@fortawesome/fontawesome-free-brands';
 
 import { ABOUT, SKILLS, WORK } from '../../constants/app.routes';
+import { NAME, JOB } from '../../constants/branding';
 
 import Avatar from '../components/avatar';
 import avatarPic from '../../images/avatar.jpg';
@@ -15,14 +16,14 @@ const cvLink = 'https://drive.google.com/file/d/0ByBBM9QN-qH4ZzZjMFNzRzRyTWc/vie
 const Landing = () => (
   <div className="Landing">
     <section className="App-section is-cover">
-      <h1 className="Heading Heading--lg">Rafael Pérez García</h1>
+      <h1 className="Heading Heading--lg">{NAME}</h1>
 
       <div className="App-side">
         <Avatar main={{ url: avatarPic }} />
       </div>
 
       <div className="App-side is-large">
-        <p>I am a web developer, self-taught, <span className="bold">quick learner</span>, passionate about programming and able to <span className="bold">adapt quickly</span> to new enviroments. Know more <Link className="Link" to={ABOUT}>about me</Link>.</p>
+        <p>I am a {JOB}, self-taught, <span className="bold">quick learner</span>, passionate about programming and able to <span className="bold">adapt quickly</span> to new enviroments. Know more <Link className="Link" to={ABOUT}>about me</Link>.</p>
       </div>
     </section>
 
