@@ -7,7 +7,7 @@ import {
   faPatreon,
   faLinkedin,
   faGithub,
-  faDiscord,
+  faMedium,
   faFacebook,
   faTwitter,
   faYoutube,
@@ -18,7 +18,7 @@ import {
   PATREON,
   LINKEDIN,
   GITHUB,
-  DISCORD,
+  MEDIUM,
   FACEBOOK,
   TWITTER,
   YOUTUBE,
@@ -46,9 +46,9 @@ const Contact = () => (
           <FA icon={faGithub} />
         </a>
       </li>
-      <li className="List-item is-discord">
-        <a className="Contact-link" href={DISCORD} target="_blank" rel="noopener noreferer">
-          <FA icon={faDiscord} />
+      <li className="List-item is-medium">
+        <a className="Contact-link" href={MEDIUM} target="_blank" rel="noopener noreferer">
+          <FA icon={faMedium} />
         </a>
       </li>
       <li className="List-item is-facebook">
