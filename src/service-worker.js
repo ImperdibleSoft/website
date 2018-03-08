@@ -1,8 +1,8 @@
 import assets from '../webpack/utils/assets.json';
-import manifest from '../package';
+import packageJson from '../package';
 
 // Get version from package.json, so if there is a new version, update assets
-const { version } = manifest;
+const { version } = packageJson;
 const versionAssets = `imp-assets-v${version}`;
 const versionRequests = `imp-data-v${version}`;
 debug(`Loading v${version}`);
@@ -20,6 +20,8 @@ const savedAssets = [
 // Install the service worker
 self.addEventListener('install', (e) => {
   debug('Installing');
+  self.skipWaiting();
+
   e.waitUntil(caches.open(versionAssets).then((cache) => {
     // When installed Service Worker, add files to cache
     debug('Installed');
