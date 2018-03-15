@@ -75,7 +75,7 @@ const Work = () => (
           <p>Meanwhile, I worked om projects for clients like <span className="bold">Trenitalia</span> or <span className="bold">El Corte Inglés</span>.</p>
         </div>
       </div>
-      <div className="clearfix is-hidden">
+      <div className="clearfix">
         <div className="App-side is-left">
           <Avatar main={{ url: tuenti, className: 'is-logo' }} className="is-background" />
         </div>
@@ -83,9 +83,9 @@ const Work = () => (
           <h3 className="Heading Heading--xs">Tuenti</h3>
           <p><FA icon={faCalendar} className="is-imperdible" /> 2018 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES</p>
 
-          <p>I'm starting a new period at <span className="bold">Tuenti</span>, one of the most innovative tech companies in Spain.</p>
-          <p>During this time, I'll be creating a web app for <span className="bold">Movistar</span>, that is going to be used by clients arround all the world.</p>
-          <p>This app is using <span className="bold is-react">ReactJS</span>, <span className="bold is-redux">Redux</span>, <span className="bold is-sass">Sass</span> and some other technologies I don't know yet.</p>
+          <p>I'm starting a new period at <span className="bold">Tuenti</span>, one of the most innovative tech companies in Spain. I participate in a very ambicious project for <span className="bold">Movistar</span>, that is going to be used by all company clients, and also clients from <span className="bold">Tuenti</span>, <span className="bold">O2</span>, <span className="bold">Vivo</span> and other companies of the group.</p>
+          <p>During this time, I'll be creating <span className="bold is-react">ReactJS</span> components, and utils to be used by other teams in a web app.</p>
+          <p>For developing this web app, we are also using <span className="bold is-webpack">Webpack</span>, <span className="bold is-redux">Redux</span>, <span className="bold is-sass">Sass</span> and some other technologies I don't know yet.</p>
         </div>
       </div>
     </div>
