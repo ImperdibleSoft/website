@@ -18,7 +18,7 @@ const debuggingGA = true;
 let initialized = false;
 
 const log = (...args) => {
-  if (NODE_ENV === 'dev') {
+  if (ENV === 'dev') {
     console.log('[DEV]: ', ...args);
   }
 };
@@ -37,7 +37,6 @@ class App extends React.Component {
       this.logPageView();
     }
   }
-
 
   initReactGA() {
     // If not in development and not initialized
