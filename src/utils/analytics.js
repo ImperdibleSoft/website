@@ -15,7 +15,14 @@ export const socialTracking = {
   category: 'Button Social',
   action: 'User clicked in a social button',
 };
-export const buttonPrimaryTracking = {};
+export const iconTracking = {
+  category: 'Icon',
+  action: 'User clicked an icon',
+};
+export const buttonPrimaryTracking = {
+  category: 'Button Primary',
+  action: 'User clicked in a primary button',
+};
 export const buttonSecondaryTracking = {
   category: 'Button Secondary',
   action: 'User clicked in a secondary button',
