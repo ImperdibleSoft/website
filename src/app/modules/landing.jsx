@@ -39,31 +39,66 @@ const Landing = () => (
       <p>These are some of my most requested skills:</p>
 
       <ul className="List List--iconic">
-        <li className="List-item is-react">
+        <li className="List-item is-react" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'React',
+          })
+        }}>
           <FA icon={faReact} />
           <span className="List-desc">ReactJS</span>
         </li>
-        <li className="List-item is-angular2">
+        <li className="List-item is-angular2" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'Angular2',
+          })
+        }}>
           <FA icon={faAngular} />
           <span className="List-desc">Angular 2+</span>
         </li>
-        <li className="List-item is-vue">
+        <li className="List-item is-vue" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'Vuejs',
+          })
+        }}>
           <FA icon={faVuejs} />
           <span className="List-desc">VueJS</span>
         </li>
-        <li className="List-item is-angular">
+        <li className="List-item is-angular" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'Angular',
+          })
+        }}>
           <FA icon={faAngular} />
           <span className="List-desc">AngularJS</span>
         </li>
-        <li className="List-item is-node">
+        <li className="List-item is-node" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'NodeJs',
+          })
+        }}>
           <FA icon={faNodeJs} />
           <span className="List-desc">NodeJS</span>
         </li>
-        <li className="List-item is-git">
+        <li className="List-item is-git" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'Git',
+          })
+        }}>
           <FA icon={faGit} />
           <span className="List-desc">Git</span>
         </li>
-        <li className="List-item is-sass">
+        <li className="List-item is-sass" onClick={() => {
+          logClick({
+            ...iconTracking,
+            label: 'Sass',
+          })
+        }}>
           <FA icon={faSass} />
           <span className="List-desc">Sass</span>
         </li>
