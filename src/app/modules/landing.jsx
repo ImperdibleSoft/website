@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import FA from '@fortawesome/react-fontawesome';
 import { faFilePdf } from '@fortawesome/fontawesome-free-regular';
 import { faReact, faAngular, faVuejs, faSass, faNodeJs, faGit } from '@fortawesome/fontawesome-free-brands';
+import { linkTracking, navigationTracking, logClick } from '../../utils/analytics';
 
 import { ABOUT, SKILLS, WORK } from '../../constants/app.routes';
 import { NAME, JOB } from '../../constants/branding';
@@ -23,13 +24,18 @@ const Landing = () => (
       </div>
 
       <div className="App-side is-large">
-        <p>I am a {JOB}, self-taught, <span className="bold">quick learner</span>, passionate about programming and able to <span className="bold">adapt quickly</span> to new enviroments. Know more <Link className="Link" to={ABOUT}>about me</Link>.</p>
+        <p>I am a {JOB}, self-taught, <span className="bold">quick learner</span>, passionate about programming and able to <span className="bold">adapt quickly</span> to new enviroments. Know more <Link className="Link" to={ABOUT} onClick={() => {
+          logClick({
+            ...navigationTracking,
+            label: 'About',
+          })
+        }}>about me</Link>.</p>
       </div>
     </section>
 
     <section className="App-section">
       <h1 className="Heading Heading--lg">My Skills</h1>
-      
+
       <p>These are some of my most requested skills:</p>
 
       <ul className="List List--iconic">
@@ -63,28 +69,43 @@ const Landing = () => (
         </li>
       </ul>
 
-      <p>Know more <Link className="Link" to={SKILLS}>about my skills</Link>.</p>
+      <p>Know more <Link className="Link" to={SKILLS} onClick={() => {
+        logClick({
+          ...navigationTracking,
+          label: 'Skills',
+        })
+      }}>about my skills</Link>.</p>
     </section>
 
     <section className="App-section">
       <h1 className="Heading Heading--lg">My work</h1>
 
       <div className="App-side is-large">
-      {/* TODO: Talk about my work, not my skills */}
+        {/* TODO: Talk about my work, not my skills */}
         <p>I've been coding for <span className="bold">7 years</span> (at least).</p>
         <p>During this time, I have worked in big (3.000+ employees) and small (15 employees) companies.</p>
         <p>My passion for coding also has pushed me to create several <span className="bold">personal projects</span> during my free time.</p>
 
         <ul className="List List--iconic">
           <li className="List-item">
-            <a href={cvLink} target="_blank" rel="noopener noreferer">
+            <a href={cvLink} target="_blank" rel="noopener noreferer" onClick={() => {
+              logClick({
+                ...navigationTracking,
+                label: 'Download CV',
+              })
+            }}>
               <FA icon={faFilePdf} />
               <span className="List-desc">Download my C.V.</span>
             </a>
           </li>
         </ul>
 
-        <p>Know more <Link className="Link" to={WORK}>about my work</Link>.</p>
+        <p>Know more <Link className="Link" to={WORK} onClick={() => {
+          logClick({
+            ...navigationTracking,
+            label: 'Work',
+          })
+        }}>about my work</Link>.</p>
       </div>
 
       <div className="App-side">
