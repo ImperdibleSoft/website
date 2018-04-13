@@ -2,6 +2,7 @@ import React from 'react';
 import FA from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faLink } from '@fortawesome/fontawesome-free-solid';
 import { faCalendar } from '@fortawesome/fontawesome-free-regular';
+import { navigationTracking, logClick } from '../../utils/analytics';
 
 import Avatar from '../components/avatar';
 
@@ -102,7 +103,12 @@ const Work = () => (
         </div>
         <div className="App-side is-right is-large">
           <h3 className="Heading Heading--xs">Monopoly Online</h3>
-          <p><FA icon={faCalendar} className="is-imperdible" /> 2012 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Las Palmas de Gran Canaria, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://www.facebook.com/MonopolyOnline" className="Link" target="_blank" rel="noopener noreferer">Facebook</a></p>
+          <p><FA icon={faCalendar} className="is-imperdible" /> 2012 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Las Palmas de Gran Canaria, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://www.facebook.com/MonopolyOnline" className="Link" target="_blank" rel="noopener noreferer" onClick={() => {
+            logClick({
+              ...navigationTracking,
+              label: 'Monopoly Online\'s Facebook',
+            })
+          }}>Facebook</a></p>
 
           <p>I was finishing the first year of my <span className="bold">Upper Degree</span>, when one of our teacher asked for creating a game using <span className="bold is-javascript">Javascript</span>. I was <span className="bold">so excited</span> about it, that I finished it <span className="bold">before</span> the starting date.</p>
           <p>With 90 days with nothing to do in the horizon, I decided to start the <span className="bold">biggest personal project</span> I've ever faced: building a Monopoly.</p>
@@ -116,7 +122,12 @@ const Work = () => (
         </div>
         <div className="App-side is-left is-large">
           <h3 className="Heading Heading--xs">Material CSS</h3>
-          <p><FA icon={faCalendar} className="is-imperdible" /> 2014 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Mar del Plata, AR - <FA icon={faLink} className="is-imperdible" /> <a href="http://www.material-css.com/#/" className="Link" target="_blank" rel="noopener noreferer">Website</a></p>
+          <p><FA icon={faCalendar} className="is-imperdible" /> 2014 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Mar del Plata, AR - <FA icon={faLink} className="is-imperdible" /> <a href="http://www.material-css.com/#/" className="Link" target="_blank" rel="noopener noreferer" onClick={() => {
+            logClick({
+              ...navigationTracking,
+              label: 'Material CSS website',
+            })
+          }}>Website</a></p>
 
           <p>Android 5 was launched few months ago, and I really loved Google's <span className="bold">Material Design</span>. But there wasn't any library that allows me to build websites based on Material Design without being attached to a javascript framework.</p>
           <p>I didn't want to use Angular Material, Polymer, Materialize and other options, because they were forcing me to code Javascript in a particular way, and I wanted a tool for creating Material Design websites, <span className="bold">compatible with any framework</span> or library.</p>
@@ -129,7 +140,12 @@ const Work = () => (
         </div>
         <div className="App-side is-right is-large">
           <h3 className="Heading Heading--xs">ngConsole</h3>
-          <p><FA icon={faCalendar} className="is-imperdible" /> 2015 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Mar del Plata, AR - <FA icon={faLink} className="is-imperdible" /> <a href="http://imperdiblesoft.github.io/ngConsole/demo/#/" className="Link" target="_blank" rel="noopener noreferer">Website</a></p>
+          <p><FA icon={faCalendar} className="is-imperdible" /> 2015 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Mar del Plata, AR - <FA icon={faLink} className="is-imperdible" /> <a href="http://imperdiblesoft.github.io/ngConsole/demo/#/" className="Link" target="_blank" rel="noopener noreferer" onClick={() => {
+            logClick({
+              ...navigationTracking,
+              label: 'ngConsole website',
+            })
+          }}>Website</a></p>
 
           <p>We were building a software that allows us to open the door with our phones or using a web app, at <span className="bold">Spark Digital</span>.</p>
           <p>We had some problems while resetting the <span className="bold">Raspberry Pi</span> (our server), so I decided to create a console that we can use from the web app.</p>
@@ -142,7 +158,12 @@ const Work = () => (
         </div>
         <div className="App-side is-left is-large">
           <h3 className="Heading Heading--xs">Character Arena</h3>
-          <p><FA icon={faCalendar} className="is-imperdible" /> 2017 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://www.characterarena.com/" className="Link" target="_blank" rel="noopener noreferer">Website</a></p>
+          <p><FA icon={faCalendar} className="is-imperdible" /> 2017 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://www.characterarena.com/" className="Link" target="_blank" rel="noopener noreferer" onClick={() => {
+            logClick({
+              ...navigationTracking,
+              label: 'Character Arena website',
+            })
+          }}>Website</a></p>
 
           <p>I was really impresed about what I learned in <span className="bold">Samyroad</span> about ReactJS, so I decided to start a project using that stack.</p>
           <p>I love videogames, in particular <span className="bold">World of Warcraft</span>, so I decided to create a <span className="bold">Progressive Web App</span> where I can compare my character with others, and identify the areas where my character should improve.</p>
@@ -155,7 +176,12 @@ const Work = () => (
         </div>
         <div className="App-side is-right is-large">
           <h3 className="Heading Heading--xs">Manapp</h3>
-          <p><FA icon={faCalendar} className="is-imperdible" /> 2018 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://github.com/ImperdibleSoft/manapp-vue" className="Link" target="_blank" rel="noopener noreferer">Github</a></p>
+          <p><FA icon={faCalendar} className="is-imperdible" /> 2018 - <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES - <FA icon={faLink} className="is-imperdible" /> <a href="https://github.com/ImperdibleSoft/manapp-vue" className="Link" target="_blank" rel="noopener noreferer" onClick={() => {
+            logClick({
+              ...navigationTracking,
+              label: 'Manapp repo',
+            })
+          }}>Github</a></p>
 
           <p>I was trying to learn about <span className="bold is-angular2">Angular 2</span> and <span className="bold">Typescript</span> since I was living in Argentina (2015).When I got fired in January 2018, I thought was my opportunity to <span className="bold">learn</span> and <span className="bold">improve my options</span> of getting a new (and better) job.</p>
           <p>I decided to refactor one of my old projects, but this time migrating from AngularJS to <span className="bold is-angular2">Angular 2+</span>, wich is very bound to <span className="bold">Typescript</span>.</p>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FA from '@fortawesome/react-fontawesome';
 import { faPatreon } from '@fortawesome/fontawesome-free-brands';
+import { buttonSecondaryTracking, linkTracking, logClick } from '../../utils/analytics';
 
 import { ABOUT } from '../../constants/app.routes';
 
@@ -18,7 +19,17 @@ const Support = () => (
     <div className="App-side is-large">
       <p>Each time I get a new patron, Kumba and Garona get a surprise.</p>
 
-      <a className="Button Button--alt" href="https://www.patreon.com/imperdiblesoft/overview" target="_blank" rel="noopener noreferer">Give them a treat!</a> or <Link className="Link" to={`${ABOUT}#dogs`}>Meet them</Link>
+      <a className="Button Button--alt" href="https://www.patreon.com/imperdiblesoft/overview" target="_blank" rel="noopener noreferer" onClick={() => {
+        logClick({
+          ...buttonSecondaryTracking,
+          label: 'Give them a treat!',
+        });
+      }}>Give them a treat!</a> or <Link className="Link" to={`${ABOUT}#dogs`} onClick={() => {
+        logClick({
+          ...linkTracking,
+          label: 'Meet them',
+        });
+      }}>Meet them</Link>
     </div>
   </div>
 );

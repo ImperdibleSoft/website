@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { navigationTracking, logClick } from '../../utils/analytics';
 
 import Avatar from '../components/avatar';
 import me from '../../images/about/me.jpg';
@@ -35,7 +36,12 @@ const AboutMe = () => (
 
       <div className="App-side is-large">
         <p>My name is {NAME}.</p>
-        <p>I'm from <a className="Link" href={lasPalmasLink} target="_blank" rel="noopener noreferer">Las Palmas de Gran Canaria</a>, but now I'm living in Madrid.</p>
+        <p>I'm from <a className="Link" href={lasPalmasLink} target="_blank" rel="noopener noreferer" onClick={() => {
+          logClick({
+            ...navigationTracking,
+            label: 'Las Palmas de Gran Canaria',
+          })
+        }}>Las Palmas de Gran Canaria</a>, but now I'm living in Madrid.</p>
         <p>I've been coding for more than 7 years, starting with <span className="bold">Basic 5.0</span>, and trying different languages such as Java, Visual Basic or C++.</p>
         <p>Finally, I've found my passion and favorite stack on <span className="bold is-html">HTML</span>, <span className="bold is-css">CSS</span> and <span className="bold is-javascript">Javascript</span>.</p>
       </div>

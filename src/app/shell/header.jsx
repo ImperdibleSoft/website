@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { mainNavigationTracking, logClick } from '../../utils/analytics';
 
 import { HOME, ABOUT, SKILLS, WORK } from '../../constants/app.routes'
 
@@ -11,19 +12,27 @@ const Header = () => (
     <div className="Header-bar">
       <ul className="Header-nav" role="nav">
         <li className="Header-item">
-          <Link className="Header-link" to={HOME}>
+          <Link className="Header-link" to={HOME} onClick={() => {
+            logClick(mainNavigationTracking);
+          }}>
             <img className="Header-logo" src={logo} />
             <img className="Header-logotype" src={logotype} />
           </Link>
         </li>
         <li className="Header-item">
-          <Link className="Header-link" to={ABOUT}>Me</Link>
+          <Link className="Header-link" to={ABOUT} onClick={() => {
+            logClick(mainNavigationTracking);
+          }}>Me</Link>
         </li>
         <li className="Header-item">
-          <Link className="Header-link" to={SKILLS}>My skills</Link>
+          <Link className="Header-link" to={SKILLS} onClick={() => {
+            logClick(mainNavigationTracking);
+          }}>My skills</Link>
         </li>
         <li className="Header-item">
-          <Link className="Header-link" to={WORK}>My work</Link>
+          <Link className="Header-link" to={WORK} onClick={() => {
+            logClick(mainNavigationTracking);
+          }}>My work</Link>
         </li>
       </ul>
     </div>
