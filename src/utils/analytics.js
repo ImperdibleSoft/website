@@ -8,8 +8,8 @@ const debuggingGA = false;
 let initialized = false;
 
 const isLoggingEnabled = (debuggingGA || ENV !== 'dev');
-const shouldInitialize = (!initialized && isLoggingEnabled);
-const shouldLog = (initialized && isLoggingEnabled);
+const shouldInitialize = () => (!initialized && isLoggingEnabled);
+const shouldLog = () => (initialized && isLoggingEnabled);
 
 export const contactTracking = {
   category: 'Button Contact',
@@ -46,7 +46,7 @@ export const mainNavigationTracking = {
 
 export const initialize = () => {
   // If not in development and not initialized
-  if (shouldInitialize) {
+  if (shouldInitialize()) {
     initialized = true;
 
     // Init Google Analytics
@@ -61,7 +61,7 @@ export const initialize = () => {
 // Location change handler
 export const logNavigation = (location) => {
   // If not in development
-  if (shouldLog) {
+  if (shouldLog()) {
 
     // Update page stats
     log('Logging page navigation');
@@ -77,7 +77,7 @@ export const logClick = ({
   value = 0,
   nonInteraction = false,
 }) => {
-  if (shouldLog) {
+  if (shouldLog()) {
     const event = {
       category,
       action,
