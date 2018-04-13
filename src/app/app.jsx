@@ -3,7 +3,6 @@ import { withRouter } from 'react-router';
 import ReactGA from 'react-ga';
 import p from 'prop-types';
 
-import { ANALYTICS_TAG } from '../constants/branding';
 
 import Header from './shell/header';
 import Footer from './shell/footer';
@@ -12,57 +11,22 @@ import Contact from './components/contact';
 import Messenger from './components/messenger';
 
 import Router from './router';
-
-const { NODE_ENV: ENV } = process.env;
-const debuggingGA = true;
-let initialized = false;
-
-const log = (...args) => {
-  if (ENV === 'dev') {
-    console.log('[DEV]: ', ...args);
-  }
-};
+import { initialize, logNavigation } from '../utils/analytics'
+import { log } from '../utils/analytics';
 
 class App extends React.Component {
   componentDidMount() {
-    this.initReactGA();
+    initialize();
   }
 
   componentDidUpdate(prevProps) {
     const currPage = this.props.location.pathname;
     const prevPage = prevProps.location.pathname;
-    log(prevProps.location, this.props.location);
 
     if (prevPage !== currPage) {
-      this.logPageView();
+      logNavigation(currPage);
     }
   }
-
-  initReactGA() {
-    // If not in development and not initialized
-    if (debuggingGA || (ENV !== 'dev' && !initialized)) {
-      initialized = true;
-
-      // Init Google Analytics
-      log(`Initializing Google Analytics tag ${ANALYTICS_TAG}`);
-      ReactGA.initialize(ANALYTICS_TAG, {
-        debug: debuggingGA,
-      });
-      this.logPageView();
-    }
-  }
-
-  // Location change handler
-  logPageView() {
-    // If not in development
-    if (debuggingGA || (ENV !== 'dev' && initialized)) {
-
-      // Update page stats
-      log(`Updating page view`);
-      ReactGA.set({ page: this.props.location.pathname });
-      ReactGA.pageview(this.props.location.pathname);
-    }
-  };
 
   render() {
     return (
@@ -70,7 +34,7 @@ class App extends React.Component {
         <Header />
 
         <div className="App-content">
-          <Router onUpdate={this.logPageView} />
+          <Router onUpdate={logNavigation} />
 
           <Support />
 
