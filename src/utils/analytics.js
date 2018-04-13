@@ -4,8 +4,12 @@ import { log } from './logger';
 import { ANALYTICS_TAG } from '../constants/branding';
 
 const { NODE_ENV: ENV } = process.env;
-const debuggingGA = true;
+const debuggingGA = false;
 let initialized = false;
+
+const isLoggingEnabled = (debuggingGA || ENV !== 'dev');
+const shouldInitialize = (!initialized && isLoggingEnabled);
+const shouldLog = (initialized && isLoggingEnabled);
 
 export const contactTracking = {
   category: 'Button Contact',
@@ -42,7 +46,7 @@ export const mainNavigationTracking = {
 
 export const initialize = () => {
   // If not in development and not initialized
-  if (!initialized && (debuggingGA || ENV !== 'dev')) {
+  if (shouldInitialize) {
     initialized = true;
 
     // Init Google Analytics
@@ -57,7 +61,7 @@ export const initialize = () => {
 // Location change handler
 export const logNavigation = (location) => {
   // If not in development
-  if (initialized && (debuggingGA || ENV !== 'dev')) {
+  if (shouldLog) {
 
     // Update page stats
     log('Logging page navigation');
@@ -73,7 +77,7 @@ export const logClick = ({
   value = 0,
   nonInteraction = false,
 }) => {
-  if (initialized && (debuggingGA || ENV !== 'dev')) {
+  if (shouldLog) {
     const event = {
       category,
       action,
