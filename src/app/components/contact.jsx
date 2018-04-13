@@ -25,17 +25,7 @@ import {
   EMAIL,
   PHONE,
 } from '../../constants/branding';
-import { logClick } from '../../utils/analytics';
-
-const socialTracking = {
-  category: 'Button Social',
-  action: 'User clicked in a social button',
-};
-
-const contactTracking = {
-  category: 'Button Contact',
-  action: 'User clicked in a contact button',
-};
+import { contactTracking, socialTracking, logClick } from '../../utils/analytics';
 
 const Contact = () => (
   <section className="App-section">
