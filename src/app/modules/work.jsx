@@ -73,7 +73,7 @@ const Work = () => (
 
           <p>When I moved to <span className="bold">Qlik</span>, I realized they had an outdated stack for their products.</p>
           <p>I decided to help them updating it when I was not assigned to a project. In order to do this, I built a boilerplating based on <span className="bold is-node">NodeJS</span>, <span className="bold is-webpack">Webpack</span>, <span className="bold is-angular">AngularJS</span>, <span className="bold is-sass">Sass</span> and some automated tasks that connected the web apps to <span className="bold">Qlik Sense</span> servers.</p>
-          <p>Meanwhile, I worked om projects for clients like <span className="bold">Trenitalia</span> or <span className="bold">El Corte Inglés</span>.</p>
+          <p>Meanwhile, I worked on projects for clients like <span className="bold">Trenitalia</span> or <span className="bold">El Corte Inglés</span>.</p>
         </div>
       </div>
       <div className="clearfix">
