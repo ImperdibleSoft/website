@@ -3,7 +3,7 @@ $unit: 4px;
 // Colors
 // Base
 $real-white: #fff;
-$white: #F9F9F9;
+$white: #f9f9f9;
 $fake-white: #f3f3f3;
 $gray-lighter: #bbb;
 $gray-light: #999;
@@ -43,6 +43,7 @@ $angular: #de2331;
 $vue: #4db084;
 $knockout: #ec6f1b;
 $backbone: #3a71b5;
+$typescript: #294e80;
 $git: #333;
 $node: #8fc53f;
 $yarn: #4a99c5;
@@ -57,8 +58,8 @@ $mysql: #577ea1;
 $php: #8992be;
 
 // Text
-$font-title: 'Noto Serif', serif;
-$font-text: 'Open Sans', sans-serif;
+$font-title: "Noto Serif", serif;
+$font-text: "Open Sans", sans-serif;
 
 // Layout
 $max-width: 1024px;
