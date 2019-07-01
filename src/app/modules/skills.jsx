@@ -78,6 +78,30 @@ const Skills = () => (
           <span className="List-desc">Javascript</span>
         </li>
         <li
+          className="List-item is-es6"
+          onClick={() => {
+            logClick({
+              ...iconTracking,
+              label: "ES6"
+            });
+          }}
+        >
+          <FA icon={faCheckCircle} />
+          <span className="List-desc">ES6</span>
+        </li>
+        <li
+          className="List-item is-typescript"
+          onClick={() => {
+            logClick({
+              ...iconTracking,
+              label: "Typescript"
+            });
+          }}
+        >
+          <FA icon={faCheckCircle} />
+          <span className="List-desc">Typescript</span>
+        </li>
+        <li
           className="List-item is-react"
           onClick={() => {
             logClick({
@@ -90,18 +114,6 @@ const Skills = () => (
           <span className="List-desc">ReactJS</span>
         </li>
         <li
-          className="List-item is-angular2"
-          onClick={() => {
-            logClick({
-              ...iconTracking,
-              label: "Angular 2"
-            });
-          }}
-        >
-          <FA icon={faAngular} />
-          <span className="List-desc">Angular 2+</span>
-        </li>
-        <li
           className="List-item is-redux"
           onClick={() => {
             logClick({
@@ -112,6 +124,18 @@ const Skills = () => (
         >
           <FA icon={faCheckCircle} />
           <span className="List-desc">Redux</span>
+        </li>
+        <li
+          className="List-item is-angular2"
+          onClick={() => {
+            logClick({
+              ...iconTracking,
+              label: "Angular 2"
+            });
+          }}
+        >
+          <FA icon={faAngular} />
+          <span className="List-desc">Angular 2+</span>
         </li>
         <li
           className="List-item is-vue"
@@ -160,30 +184,6 @@ const Skills = () => (
         >
           <FA icon={faCheckCircle} />
           <span className="List-desc">Backbone</span>
-        </li>
-        <li
-          className="List-item is-es6"
-          onClick={() => {
-            logClick({
-              ...iconTracking,
-              label: "ES6"
-            });
-          }}
-        >
-          <FA icon={faCheckCircle} />
-          <span className="List-desc">ES6</span>
-        </li>
-        <li
-          className="List-item is-typescript"
-          onClick={() => {
-            logClick({
-              ...iconTracking,
-              label: "Typescript"
-            });
-          }}
-        >
-          <FA icon={faCheckCircle} />
-          <span className="List-desc">Typescript</span>
         </li>
       </ul>
 
@@ -495,6 +495,30 @@ const Skills = () => (
         >
           <FA icon={faCheckCircle} />
           <span className="List-desc">Webpack</span>
+        </li>
+        <li
+          className="List-item is-react"
+          onClick={() => {
+            logClick({
+              ...iconTracking,
+              label: "ReactJS"
+            });
+          }}
+        >
+          <FA icon={faReact} />
+          <span className="List-desc">ReactJS</span>
+        </li>
+        <li
+          className="List-item is-redux"
+          onClick={() => {
+            logClick({
+              ...iconTracking,
+              label: "Redux"
+            });
+          }}
+        >
+          <FA icon={faCheckCircle} />
+          <span className="List-desc">Redux</span>
         </li>
         <li
           className="List-item is-typescript"

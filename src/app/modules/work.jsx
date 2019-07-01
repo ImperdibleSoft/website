@@ -11,6 +11,7 @@ import sparkdigital from "../../images/companies/sparkdigital.png";
 import samyroad from "../../images/companies/samyroad.png";
 import qlik from "../../images/companies/qlik.png";
 import tuenti from "../../images/companies/tuenti.png";
+import cognizant from "../../images/companies/cognizant.png";
 
 import monopolyonline from "../../images/projects/monopolyonline.png";
 import materialcss from "../../images/projects/materialcss.png";
@@ -205,6 +206,34 @@ const Work = () => (
           <p>
             One of my most visible achievements has been to implement from
             scratch the Push notifications system, based on Web Push APIs.
+          </p>
+        </div>
+      </div>
+      <div className="clearfix">
+        <div className="App-side is-right">
+          <Avatar
+            main={{ url: cognizant, className: "is-logo" }}
+            className="is-background"
+          />
+        </div>
+        <div className="App-side is-left is-large">
+          <h3 className="Heading Heading--xs">Cognizant</h3>
+          <p>
+            <FA icon={faCalendar} className="is-imperdible" /> 2019 -{" "}
+            <FA icon={faMapMarkerAlt} className="is-imperdible" /> Madrid, ES
+          </p>
+
+          <p>
+            I'm starting a new period at <span className="bold">Cognizant</span>
+            , a very important consultancy in software development area.
+          </p>
+          <p>
+            I'll be giving support to different projects where strong web
+            development skills are needed, begining with an{" "}
+            <span className="bold">Adidas</span> project, based on{" "}
+            <span className="bold is-react">ReactJS</span>,{" "}
+            <span className="bold is-typescript">Typescript</span> and{" "}
+            <span className="bold is-parcel">Parcel</span>.
           </p>
         </div>
       </div>
@@ -488,11 +517,12 @@ const Work = () => (
             decided to migrate it to <span className="bold is-vue">VueJS</span>.
           </p>
           <p>
-            Even when I have the project running on VueJS, I wasn't convinced
-            that this framework would satisfy my developing experience, so I
-            decided to migrate it to{" "}
-            <span className="bold is-react">ReactJS</span>, but this time using{" "}
-            <span className="bold is-typescript">Typescript</span>.
+            Even when I have the project running on{" "}
+            <span className="bold is-vue">VueJS</span>, I wasn't convinced that
+            this framework would satisfy my developing experience, so I decided
+            to migrate it to <span className="bold is-react">ReactJS</span>, but
+            this time using{" "}
+            <span className="bold is-typescript">Typescript</span> over it.
           </p>
         </div>
       </div>
