@@ -2,7 +2,7 @@
   "name": "imperdiblesoft.com",
   "description": "Project to create a new, simple and easy to use website with my professional profile",
   "author": "Rafael Pérez García",
-  "version": "7.1.3",
+  "version": "7.1.4",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
@@ -27,6 +27,7 @@
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^3.0.0",
     "image-webpack-loader": "^3.6.0",
     "node-sass": "^4.7.2",
     "node-sass-json-importer": "^3.1.4",
