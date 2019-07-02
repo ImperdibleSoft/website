@@ -184,21 +184,22 @@ const Work = () => (
           </p>
 
           <p>
-            I'm starting a new period at <span className="bold">Tuenti</span>,
-            one of the most innovative tech companies in Spain. I participate in
-            a very ambicious project for <span className="bold">Movistar</span>,
-            that is going to be used by all company clients, and also clients
-            from <span className="bold">Tuenti</span>,{" "}
+            I've spent a year working at <span className="bold">Tuenti</span>,
+            one of the most innovative tech companies in Spain. I participated
+            in a very ambicious project for{" "}
+            <span className="bold">Movistar</span>, that is going to be used by
+            all company clients, and also clients from{" "}
+            <span className="bold">Tuenti</span>,{" "}
             <span className="bold">O2</span>, <span className="bold">Vivo</span>{" "}
             and other companies of the group.
           </p>
           <p>
-            During this time, I'll be creating{" "}
+            During this time, I was creating{" "}
             <span className="bold is-react">ReactJS</span> components, and utils
             to be used by other teams in a web app.
           </p>
           <p>
-            For developing this web app, we are also using{" "}
+            For developing this web app, we were also using{" "}
             <span className="bold is-webpack">Webpack</span>,{" "}
             <span className="bold is-redux">Redux</span>,{" "}
             <span className="bold">Flowtype</span> and some other technologies.
@@ -229,11 +230,11 @@ const Work = () => (
           </p>
           <p>
             I'll be giving support to different projects where strong web
-            development skills are needed, begining with an{" "}
-            <span className="bold">Adidas</span> project, based on{" "}
+            development skills are needed, begining with a project, based on{" "}
             <span className="bold is-react">ReactJS</span>,{" "}
-            <span className="bold is-typescript">Typescript</span> and{" "}
-            <span className="bold is-parcel">Parcel</span>.
+            <span className="bold is-typescript">Typescript</span>,{" "}
+            <span className="bold is-styled-components">Styled Components</span>{" "}
+            and <span className="bold is-parcel">Parcel</span>.
           </p>
         </div>
       </div>
