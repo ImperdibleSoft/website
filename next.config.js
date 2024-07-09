@@ -27,6 +27,7 @@ const getNextConfig = ({ configDomain }) => {
 
   return config;
 };
+
 const getNextPwaConfig = (version) => {
   const StaleWhileRevalidate = 'StaleWhileRevalidate';
 
@@ -106,7 +107,7 @@ const getNextPwaConfig = (version) => {
 };
 
 const nextConfig = getNextConfig({
-  configDomain: 'www.imperdiblesoft.com',
+  configDomain: '*.imperdiblesoft.com',
   version
 });
 

@@ -1,7 +1,8 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import React, { PropsWithChildren, useEffect } from 'react';
-import { initialize, logNavigation } from '../../utils';
+import { version } from '../../constants';
+import { clearOldCaches, initialize, logNavigation } from '../../utils';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import GlobalCSS from './components/GlobalCSS';
@@ -15,6 +16,7 @@ const AppLayout = ({ children }: PropsWithChildren): JSX.Element => {
 
   useEffect(() => {
     initialize();
+    clearOldCaches(version);
   }, []);
 
   useEffect(() => {
