@@ -1,6 +1,5 @@
 import ReactGA from 'react-ga';
-
-import { ANALYTICS_TAG } from '../constants/branding';
+import { trackingId } from '../constants';
 
 const { NODE_ENV: ENV } = process.env;
 const debuggingGA = false;
@@ -60,8 +59,8 @@ export const initialize = () => {
     initialized = true;
 
     // Init Google Analytics
-    console.log(`Initializing Google Analytics tag ${ANALYTICS_TAG}`);
-    ReactGA.initialize(ANALYTICS_TAG, {
+    console.log(`Initializing Google Analytics tag ${trackingId}`);
+    ReactGA.initialize(trackingId, {
       debug: debuggingGA
     });
     logNavigation(location.href);
