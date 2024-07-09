@@ -1,9 +1,6 @@
 import React from 'react';
-import packageJson from '../../../../../package.json';
-import { NAME } from '../../../../constants';
+import { NAME, version } from '../../../../constants';
 import { FooterWrapper } from './styles';
-
-const { version } = packageJson;
 
 const Footer = (): JSX.Element => (
   <FooterWrapper>

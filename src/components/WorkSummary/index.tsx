@@ -1,6 +1,10 @@
 import React from 'react';
 import { CV_LINK, WORK } from '../../constants';
-import { logClick, navigationTracking } from '../../utils';
+import {
+  getProgrammingExperience,
+  logClick,
+  navigationTracking
+} from '../../utils';
 import AppSection from '../AppSection';
 import CvPreview from '../CvPreview';
 import Heading from '../Heading';
@@ -14,11 +18,12 @@ const WorkSummary = (): JSX.Element => (
 
     <SplittedSection $large>
       <p>
-        I{"'"}ve been coding for <b>7 years</b> (at least).
+        I{"'"}ve been coding for <b>{getProgrammingExperience()} years</b> (at
+        least).
       </p>
       <p>
-        During this time, I have worked in big (3.000+ employees) and small (15
-        employees) companies.
+        During this time, I have worked in large (3.000+ employees) and small
+        (15 employees) companies.
       </p>
       <p>
         My passion for coding also has pushed me to create several{' '}
