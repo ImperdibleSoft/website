@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from 'react';
-import { skills } from '../../constants';
+// import { skills } from '../../constants';
 import { Principle, Skill } from '../../types';
 import { logClick, navigationTracking, renderIcon } from '../../utils';
 import Avatar from '../Avatar';
@@ -31,7 +31,14 @@ const WorkSample = ({
   title,
   url
 }: PropsWithChildren<Props>): JSX.Element => {
-  const sortedSkills = skills.filter((t) => projectSkills.includes(t.name));
+  const sortedSkills = [...projectSkills]
+    .sort()
+    .map((name) => <SkillTag key={name} margin right={right} skill={name} />);
+  // const sortedSkills = skills
+  //   .filter((t) => projectSkills.includes(t.name))
+  //   .map(({ name }) => (
+  //     <SkillTag key={name} margin right={right} skill={name} />
+  //   ));
 
   return (
     <WorkSampleWrapper $right={right}>
@@ -69,11 +76,7 @@ const WorkSample = ({
 
         {children}
 
-        <p style={{ lineHeight: 1.7 }}>
-          {sortedSkills.map(({ name }) => (
-            <SkillTag key={name} margin right={right} skill={name} />
-          ))}
-        </p>
+        <p style={{ lineHeight: 1.7 }}>{sortedSkills}</p>
       </SplittedSection>
     </WorkSampleWrapper>
   );
