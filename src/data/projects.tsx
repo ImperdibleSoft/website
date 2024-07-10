@@ -3,7 +3,7 @@ import { LPA, MAD, MDX } from '../constants';
 import { ProjectEntry } from '../types';
 
 const eucFinder: ProjectEntry = {
-  date: '2022 - 2024',
+  date: '2022 - Ongoing',
   location: MAD,
   picture: '/projects/eucfinder.svg',
   pictureSize: [256, 256],
@@ -52,7 +52,7 @@ const eucFinder: ProjectEntry = {
 };
 
 const characterArena: ProjectEntry = {
-  date: '2017',
+  date: '2017 - 2021',
   location: MAD,
   picture: '/projects/characterarena.png',
   pictureSize: [256, 256],
@@ -155,7 +155,7 @@ const materialCss: ProjectEntry = {
 };
 
 const monopolyOnline: ProjectEntry = {
-  date: '2012',
+  date: '2012 - 2013',
   location: LPA,
   picture: '/projects/monopolyonline.png',
   pictureSize: [256, 256],

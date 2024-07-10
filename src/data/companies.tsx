@@ -1,8 +1,7 @@
 import React from 'react';
-import { NativeLink } from '../components';
+import { NativeLink, SkillTag } from '../components';
 import { MAD, MDX } from '../constants';
 import { ProjectEntry } from '../types';
-import { getItemColor } from '../utils';
 
 const sparkDigitalLetter =
   'https://drive.google.com/file/d/0ByBBM9QN-qH4ejEzRF92MURjcHM/edit?resourcekey=0-YJt5FlzLXMjilMkyG5h0ag';
@@ -37,7 +36,9 @@ const cognizant2: ProjectEntry = {
     <>
       <p>
         I{"'"}m in charge of designing architecture, technologies and
-        methodologies for developing apps for final users.
+        methodologies for developing apps based on <SkillTag skill="ReactJS" />,{' '}
+        <SkillTag skill="Redux" /> and <SkillTag skill="Typescript" />, for
+        final users.
       </p>
 
       <p>
@@ -83,8 +84,9 @@ const mimacom: ProjectEntry = {
     <>
       <p>
         I{"'"}m in charge of designing architecture, technologies and
-        methodologies for developing apps based on Microfrontends, for final
-        users.
+        methodologies for developing apps based on Microfrontends with{' '}
+        <SkillTag skill="SingleSPA" />, <SkillTag skill="VueJS" /> and{' '}
+        <SkillTag skill="Typescript" />, for final users.
       </p>
       <p>
         I{"'"}m managing small teams composed by Frontend developers and QA,
@@ -127,9 +129,10 @@ const cognizant1: ProjectEntry = {
     <>
       <p>
         I{"'"}m in charge of leading frontend teams to develop and maintain
-        responsive solutions for several clients, analyzing client needs,
-        designing app{"'"}s architecture, backend integrations, granting code
-        quality and test coverage.
+        responsive solutions based on <SkillTag skill="ReactJS" /> and{' '}
+        <SkillTag skill="Typescript" /> for several clients, analyzing client
+        needs, designing app{"'"}s architecture, backend integrations, granting
+        code quality and test coverage.
       </p>
     </>
   )
@@ -166,6 +169,8 @@ const tuenti: ProjectEntry = {
       <p>
         I{"'"}ve been working in <b>Tuenti</b>
         {"'"}s platform team, building the environment, platform and components
+        based on <SkillTag skill="ReactJS" />, <SkillTag skill="FlowType" /> and{' '}
+        <SkillTag skill="Styled components" />
         that will be used by other teams to build Novum application.
       </p>
       <p>
@@ -176,7 +181,7 @@ const tuenti: ProjectEntry = {
       </p>
       <p>
         One of my most visible achievements has been to implement from scratch
-        the Push notifications system, based on Web Push APIs.
+        the Push notifications system, based on <b>Web Push APIs</b>.
       </p>
     </>
   )
@@ -211,11 +216,11 @@ const samyRoad: ProjectEntry = {
   children: (
     <>
       <p>
-        I switched from{' '}
-        <b style={{ color: getItemColor('Angular JS') }}>Angular JS</b> to{' '}
-        <b style={{ color: getItemColor('ReactJS') }}>ReactJS</b>, created
-        responsive websites, in permanent contact with Backend team, using agile
-        methodologies.
+        I switched from <SkillTag skill="Angular JS" />
+        to <SkillTag skill="ReactJS" />, created responsive websites using{' '}
+        <SkillTag skill="Redux" />, <SkillTag skill="Sass" /> and{' '}
+        <SkillTag skill="NodeJS" /> in permanent contact with Backend team,
+        using agile methodologies.
       </p>
       <p>
         During this period, I participated in the creation of a new social
@@ -247,7 +252,8 @@ const sparkDigital: ProjectEntry = {
   children: (
     <>
       <p>
-        I created responsive websites in permanent contact with the client and
+        I created responsive websites using <SkillTag skill="Angular JS" /> and{' '}
+        <SkillTag skill="Sass" /> in permanent contact with the client and
         Backend team, using Agile methodologies.
       </p>
       <p>
@@ -283,9 +289,11 @@ const globant: ProjectEntry = {
   children: (
     <>
       <p>
-        I created responsive websites, in a permanent contact with the client
-        and Backend team, usign Agile methodologies. I also take care of
-        managing small teams for the projects I{"'"}m assigned.
+        I created responsive websites using <SkillTag skill="Angular JS" />,{' '}
+        <SkillTag skill="KnockoutJS" /> and <SkillTag skill="Sass" />, in a
+        permanent contact with the client and Backend team, usign Agile
+        methodologies. I also take care of managing small teams for the projects
+        I{"'"}m assigned.
       </p>
     </>
   )
