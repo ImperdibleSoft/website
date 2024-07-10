@@ -13,8 +13,11 @@
 /.next/
 /out/
 /public/service-worker.js
+/public/service-worker.js.map
 /public/workbox-*.js
-project-info.json
+/public/workbox-*.js.map
+/src/constants/project-info.json
+src/constants/project-info.json
 
 # production
 /build
