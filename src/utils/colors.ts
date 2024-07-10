@@ -40,6 +40,8 @@ import {
   react,
   redux,
   sass,
+  singlespa,
+  storybook,
   styledComponents,
   swagger,
   typescript,
@@ -140,6 +142,10 @@ export const getItemColor = (item: ListItemLabel): string | undefined => {
       return redux;
     case 'Sass':
       return sass;
+    case 'SingleSPA':
+      return singlespa;
+    case 'Storybook':
+      return storybook;
     case 'Styled components':
       return styledComponents;
     case 'Stylelint':

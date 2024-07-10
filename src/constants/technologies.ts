@@ -20,15 +20,21 @@ export const skills: SkillSpec[] = [
   { name: 'HTML', category: 'language', relevant: true, highlighted: true },
   { name: 'CSS', category: 'language', relevant: true, highlighted: true },
   {
+    name: 'Javascript',
+    category: 'language',
+    relevant: false,
+    highlighted: false
+  },
+  { name: 'ES6', category: 'language', relevant: false, highlighted: false },
+  {
     name: 'Typescript',
     category: 'language',
     relevant: true,
     highlighted: true
   },
-  { name: 'ES6', category: 'language', relevant: false, highlighted: false },
   {
-    name: 'Javascript',
-    category: 'language',
+    name: 'FlowType',
+    category: 'tools',
     relevant: false,
     highlighted: false
   },
@@ -39,7 +45,7 @@ export const skills: SkillSpec[] = [
   {
     name: 'ReactJS',
     category: 'framework',
-    relevant: false,
+    relevant: true,
     highlighted: true
   },
   { name: 'Redux', category: 'framework', relevant: true, highlighted: true },
@@ -138,12 +144,8 @@ export const skills: SkillSpec[] = [
   { name: 'Git', category: 'tools', relevant: true, highlighted: false },
   { name: 'Eslint', category: 'tools', relevant: true, highlighted: false },
   { name: 'Stylelint', category: 'tools', relevant: false, highlighted: false },
-  {
-    name: 'FlowType',
-    category: 'tools',
-    relevant: false,
-    highlighted: false
-  },
+  { name: 'Storybook', category: 'tools', relevant: true, highlighted: false },
+  { name: 'SingleSPA', category: 'tools', relevant: false, highlighted: false },
   { name: 'LernaJS', category: 'tools', relevant: false, highlighted: false },
   { name: 'Docker', category: 'tools', relevant: false, highlighted: false },
   { name: 'Axios', category: 'tools', relevant: false, highlighted: false },

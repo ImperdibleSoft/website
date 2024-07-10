@@ -177,6 +177,10 @@ const getIconProp = (
       return '/logos/pupeteer.webp';
     case 'Redux':
       return '/logos/redux.svg';
+    case 'SingleSPA':
+      return '/logos/singlespa.webp';
+    case 'Storybook':
+      return '/logos/storybook.png';
     case 'Styled components':
       return '/logos/styledcomponents.png';
     case 'Stylelint':

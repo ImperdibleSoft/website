@@ -13,17 +13,24 @@ const cognizant2: ProjectEntry = {
   picture: '/companies/cognizant.png',
   pictureSize: [256, 256],
   skills: [
+    'Axios',
     'CSS',
+    'Cypress',
+    'Eslint',
+    'ExpressJS',
+    'Git',
     'HTML',
     'Javascript',
     'Jest',
+    'NodeJS',
     'ReactJS',
     'Redux',
     'Styled components',
     'Testing library',
     'Typescript',
     'ViteJS',
-    'Webpack'
+    'Webpack',
+    'Yarn'
   ],
   title: 'Cognizant',
   children: (
@@ -50,18 +57,26 @@ const mimacom: ProjectEntry = {
   picture: '/companies/mimacom.svg',
   pictureSize: [256, 256],
   skills: [
+    'Axios',
     'CSS',
     'Cypress',
+    'Docker',
+    'Eslint',
+    'Git',
     'HTML',
     'Javascript',
     'Jest',
     'MSW',
+    'NodeJS',
+    'SingleSPA',
+    'Storybook',
     'Testing library',
     'Typescript',
     'ViteJS',
     'VueJS',
     'Vuetify',
-    'Vuex'
+    'Vuex',
+    'Yarn'
   ],
   title: 'Mimacom',
   children: (
@@ -88,17 +103,24 @@ const cognizant1: ProjectEntry = {
   picture: '/companies/cognizant.png',
   pictureSize: [256, 256],
   skills: [
+    'Axios',
     'CSS',
+    'Docker',
+    'Eslint',
+    'ExpressJS',
+    'Git',
     'HTML',
     'Javascript',
     'Jest',
     'MSW',
+    'NodeJS',
     'ParcelJS',
     'ReactJS',
     'Redux',
     'Styled components',
     'Testing library',
-    'Typescript'
+    'Typescript',
+    'Yarn'
   ],
   title: 'Cognizant',
   children: (
@@ -119,9 +141,13 @@ const tuenti: ProjectEntry = {
   picture: '/companies/tuenti.png',
   pictureSize: [256, 256],
   skills: [
+    'Axios',
     'CSS',
     'Enzyme',
+    'Eslint',
+    'ExpressJS',
     'FlowType',
+    'Git',
     'HTML',
     'Javascript',
     'Jest',
@@ -129,6 +155,7 @@ const tuenti: ProjectEntry = {
     'Pupeteer',
     'ReactJS',
     'Redux',
+    'Storybook',
     'Styled components',
     'Testing library',
     'Webpack'
@@ -161,27 +188,41 @@ const samyRoad: ProjectEntry = {
   picture: '/companies/samyroad.png',
   pictureSize: [256, 140],
   skills: [
+    'Axios',
+    'Bootstrap',
     'CSS',
+    'Docker',
     'Eslint',
+    'ExpressJS',
+    'Git',
     'HTML',
     'JasmineJS',
     'Javascript',
     'KarmaJS',
+    'NodeJS',
     'ReactJS',
     'Redux',
     'Sass',
     'Stylelint',
+    'Swagger UI',
     'Webpack'
   ],
   title: 'Samyroad',
   children: (
-    <p>
-      I switched from{' '}
-      <b style={{ color: getItemColor('Angular JS') }}>Angular JS</b> to{' '}
-      <b style={{ color: getItemColor('ReactJS') }}>ReactJS</b>, created
-      responsive websites, in permanent contact with Backend team, using agile
-      methodologies.
-    </p>
+    <>
+      <p>
+        I switched from{' '}
+        <b style={{ color: getItemColor('Angular JS') }}>Angular JS</b> to{' '}
+        <b style={{ color: getItemColor('ReactJS') }}>ReactJS</b>, created
+        responsive websites, in permanent contact with Backend team, using agile
+        methodologies.
+      </p>
+      <p>
+        During this period, I participated in the creation of a new social
+        platform and it{"'"}s corresponding backoffice, so we could manage and
+        supervice content that was being uploaded to it.
+      </p>
+    </>
   )
 };
 
@@ -226,10 +267,14 @@ const globant: ProjectEntry = {
   pictureSize: [256, 44],
   skills: [
     'Angular JS',
+    'BackboneJS',
     'CSS',
+    'Git',
     'Grunt',
     'HTML',
+    'JasmineJS',
     'Javascript',
+    'KarmaJS',
     'KnockoutJS',
     'NodeJS',
     'Sass'
