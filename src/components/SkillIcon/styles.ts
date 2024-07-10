@@ -6,7 +6,7 @@ interface IconWrapperProps {
   $large?: boolean;
 }
 
-export const IconWrapper = styled.div<IconWrapperProps>`
+export const IconWrapper = styled.span<IconWrapperProps>`
   align-items: center;
   clear: both;
   float: none;
@@ -19,6 +19,7 @@ export const IconWrapper = styled.div<IconWrapperProps>`
   width: 1em;
 
   & > svg {
+    max-height: 100%;
     max-width: 100%;
   }
 
