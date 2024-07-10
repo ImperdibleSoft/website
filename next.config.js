@@ -97,7 +97,9 @@ const getNextPwaConfig = ({ version }) => {
           return (
             new RegExp(`^https://www.imperdiblesoft.com`).test(
               href.toLowerCase()
-            ) && /\.(gif|jpeg|jpg|png|svg|webp)$/.test(href.toLowerCase())
+            ) &&
+            (/\.(gif|jpeg|jpg|png|svg|webp)$/.test(href.toLowerCase()) ||
+              /\/\_next\/image\?url\=/.test(href.toLowerCase()))
           );
         }
       },

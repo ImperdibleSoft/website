@@ -1,7 +1,7 @@
 {
   "name": "website",
   "description": "Rafa's portfolio",
-  "version": "8.0.4",
+  "version": "8.0.5",
   "private": true,
   "author": {
     "name": "Rafael Pérez García",
