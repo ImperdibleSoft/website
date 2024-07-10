@@ -1,31 +1,35 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 import AppLayout from '../components/AppLayout';
 import StyledComponentsRegistry from '../components/StyledComponentsRegistry';
-import { appName, brand, description } from '../constants';
+import { appName, brand, description, EMAIL, NAME } from '../constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: appName,
-  description
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: appName
+  },
+  applicationName: appName,
+  creator: `${NAME} <${EMAIL}>`,
+  description,
+  manifest: './manifest.json',
+  title: appName
+};
+
+export const viewport: Viewport = {
+  themeColor: brand,
+  userScalable: false
 };
 
 const RootLayout = ({ children }: Readonly<PropsWithChildren>) => {
   return (
     <html lang="en">
       <head>
-        <title>{appName}</title>
-        <meta name="description" content={description} />
-        <meta name="theme-color" content={brand} />
-
-        <link rel="manifest" href="manifest.json" />
         <link rel="shortcut icon" href="/logo.png" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=no"
-        />
 
         <script
           async
