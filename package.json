@@ -3,6 +3,15 @@
   "description": "Rafa's portfolio",
   "version": "8.0.4",
   "private": true,
+  "author": {
+    "name": "Rafael Pérez García",
+    "email": "rafael.perez@imperdiblesoft.com",
+    "url": "https://www.imperdiblesoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ImperdibleSoft/website.git"
+  },
   "scripts": {
     "getVersion": "ts-node --project ./tsconfig.json ./scripts/pre-build.ts",
     "clear:dist": "rimraf dist",

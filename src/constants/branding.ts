@@ -1,14 +1,20 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const projectInfo = require('./project-info.json');
 
-export const { appName, description, version, siteName, trackingId } =
-  projectInfo;
+export const {
+  appName,
+  authorEmail: EMAIL,
+  authorName: NAME,
+  description,
+  repository,
+  siteName,
+  trackingId,
+  version
+} = projectInfo;
 
-export const NAME = 'Rafael Pérez García';
 export const JOB = 'Frontend Developer';
 
 export const PHONE = '+34 684 02 78 07';
-export const EMAIL = 'rafael.perez@imperdiblesoft.com';
 
 export const PATREON = 'https://www.patreon.com/imperdiblesoft';
 export const LINKEDIN = 'https://www.linkedin.com/in/rafael-pérez-garcía';

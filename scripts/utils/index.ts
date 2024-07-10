@@ -10,15 +10,22 @@ const id = 'imperdiblesoft.com';
 const appDomain = `www.${id}`;
 
 interface BuildProjectInfoProps {
+  author: {
+    email: string;
+    name: string;
+  };
   description: string;
   dirname: string;
+  repository: string;
   trackingId?: string;
   version: string;
 }
 
 export const buildProjectInfo = ({
+  author,
   description,
   dirname,
+  repository,
   trackingId,
   version
 }: BuildProjectInfoProps) => {
@@ -26,6 +33,9 @@ export const buildProjectInfo = ({
     appName,
     appColor,
     description,
+    authorEmail: author.email,
+    authorName: author.name,
+    repository,
     siteName: appName,
     trackingId,
     version
