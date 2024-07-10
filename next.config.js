@@ -3,6 +3,7 @@ const nextPWA = require('next-pwa');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { appName, version } = require('./src/constants/project-info.json');
 
+const configDomain = '*.imperdiblesoft.com';
 console.log(`[${appName}] Building NextJS app v${version}`);
 
 const getNextConfig = ({ configDomain }) => {
@@ -28,7 +29,7 @@ const getNextConfig = ({ configDomain }) => {
   return config;
 };
 
-const getNextPwaConfig = (version) => {
+const getNextPwaConfig = ({ version }) => {
   const StaleWhileRevalidate = 'StaleWhileRevalidate';
 
   const commonOptions = {
@@ -39,6 +40,7 @@ const getNextPwaConfig = (version) => {
   return {
     disable: process.env.NODE_ENV === 'development',
     dest: 'public',
+    register: process.env.NODE_ENV !== 'development',
     sw: 'service-worker.js',
     runtimeCaching: [
       // 1. Assets
@@ -106,11 +108,10 @@ const getNextPwaConfig = (version) => {
   };
 };
 
-const nextConfig = getNextConfig({
-  configDomain: '*.imperdiblesoft.com',
-  version
-});
+const nextConfig = getNextConfig({ configDomain });
+const pwaConfig = getNextPwaConfig({ version });
 
-const withPWA = nextPWA(getNextPwaConfig(version));
+const withPWA = nextPWA(pwaConfig);
+const nextPwaConfig = withPWA(nextConfig);
 
-module.exports = withPWA(nextConfig);
+module.exports = nextPwaConfig;
