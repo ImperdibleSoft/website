@@ -42,12 +42,18 @@ export const mainNavigationTracking = {
   action: 'User clicked on navigation bar'
 };
 
+const log = (...args: unknown[]) => {
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(...args);
+  }
+};
+
 // Location change handler
 export const logNavigation = (location: string) => {
   // If not in development
   if (shouldLog()) {
     // Update page stats
-    console.log('Logging page navigation');
+    log('Logging page navigation');
     ReactGA.set({ page: location });
     ReactGA.pageview(location);
   }
@@ -59,7 +65,7 @@ export const initialize = () => {
     initialized = true;
 
     // Init Google Analytics
-    console.log(`Initializing Google Analytics tag ${trackingId}`);
+    log(`Initializing Google Analytics tag ${trackingId}`);
     ReactGA.initialize(trackingId, {
       debug: debuggingGA
     });
@@ -83,7 +89,7 @@ export const logClick = ({
       nonInteraction
     };
 
-    console.log('Logging mouse click', event);
+    log('Logging mouse click', event);
     ReactGA.event(event);
   }
 };
