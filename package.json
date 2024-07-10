@@ -1,7 +1,7 @@
 {
   "name": "website",
   "description": "Rafa's portfolio",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "private": true,
   "scripts": {
     "getVersion": "ts-node --project ./tsconfig.json ./scripts/pre-build.ts",
@@ -10,6 +10,7 @@
     "types": "tsc --noEmit",
     "lint": "next lint",
     "check-integrity": "yarn types && yarn lint",
+    "predev": "yarn getVersion",
     "dev": "next dev",
     "prebuild": "yarn getVersion",
     "build": "next build",
