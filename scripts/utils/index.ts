@@ -4,16 +4,16 @@ import { brand } from '../../src/constants/styles';
 import { commonManifestProps, manifestFileName } from '../constants';
 import { getManifestIcons } from './icons';
 
-const appColor = brand;
 const appName = 'ImperdibleSoft';
-const id = 'imperdiblesoft.com';
-const appDomain = `www.${id}`;
+
+interface Author {
+  email: string;
+  name: string;
+  url: string;
+}
 
 interface BuildProjectInfoProps {
-  author: {
-    email: string;
-    name: string;
-  };
+  author: Author;
   description: string;
   dirname: string;
   repository: string;
@@ -21,7 +21,7 @@ interface BuildProjectInfoProps {
   version: string;
 }
 
-export const buildProjectInfo = ({
+const buildProjectInfo = ({
   author,
   description,
   dirname,
@@ -31,10 +31,9 @@ export const buildProjectInfo = ({
 }: BuildProjectInfoProps) => {
   const data = JSON.stringify({
     appName,
-    appColor,
-    description,
     authorEmail: author.email,
     authorName: author.name,
+    description,
     repository,
     siteName: appName,
     trackingId,
@@ -50,6 +49,7 @@ export const buildProjectInfo = ({
 };
 
 interface BuildManifestProps {
+  author: Author;
   description: string;
   dirname: string;
   includePlatform?: boolean;
@@ -57,19 +57,23 @@ interface BuildManifestProps {
   scope?: string;
 }
 
-export const buildManifest = ({
+const buildManifest = ({
+  author: { url },
   description,
   dirname,
   start_url,
   scope
 }: BuildManifestProps) => {
+  const appDomain = url.replace(/^https?:\/\//, '');
+  const id = appDomain.replace(/^www\./, '');
+
   const manifestData = {
     ...commonManifestProps,
     name: appName,
     short_name: appName,
     description,
-    background_color: appColor,
-    theme_color: appColor,
+    background_color: brand,
+    theme_color: brand,
     id,
     start_url,
     scope: scope ?? start_url,
@@ -86,5 +90,37 @@ export const buildManifest = ({
   const output = join(dirname, '../public/', manifestFileName);
   writeFileSync(output, data, {
     encoding: 'utf-8'
+  });
+};
+
+type BuildFilesProps = BuildProjectInfoProps & BuildManifestProps;
+
+export const buildFiles = ({
+  author,
+  description,
+  dirname,
+  includePlatform,
+  repository,
+  scope,
+  start_url,
+  trackingId,
+  version
+}: BuildFilesProps) => {
+  buildProjectInfo({
+    author,
+    description,
+    dirname,
+    repository,
+    trackingId,
+    version
+  });
+
+  buildManifest({
+    author,
+    description,
+    dirname,
+    includePlatform,
+    scope,
+    start_url
   });
 };

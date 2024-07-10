@@ -1,17 +1,12 @@
 import { author, description, repository, version } from '../package.json';
-import { buildManifest, buildProjectInfo } from './utils';
+import { buildFiles } from './utils';
 
-buildProjectInfo({
+buildFiles({
   author,
   description,
   dirname: __dirname,
   repository: repository.url,
+  start_url: '/',
   trackingId: 'UA-41472956-10',
   version
-});
-
-buildManifest({
-  description,
-  dirname: __dirname,
-  start_url: '/'
 });
