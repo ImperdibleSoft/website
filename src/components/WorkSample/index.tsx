@@ -13,7 +13,6 @@ interface Props {
   date: string;
   location: string;
   picture: string;
-  pictureSize: number[];
   right?: boolean;
   skills: (Skill | Principle)[];
   title: string;
@@ -25,7 +24,6 @@ const WorkSample = ({
   date,
   location,
   picture,
-  pictureSize,
   right = false,
   skills: projectSkills,
   title,
@@ -43,11 +41,7 @@ const WorkSample = ({
   return (
     <WorkSampleWrapper $right={right}>
       <SplittedSection>
-        <Avatar
-          background
-          isLogo
-          {...{ height: pictureSize[1], url: picture, width: pictureSize[0] }}
-        />
+        <Avatar background isLogo {...{ url: picture }} />
       </SplittedSection>
 
       <SplittedSection $large>

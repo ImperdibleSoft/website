@@ -31,7 +31,6 @@ export interface ProjectEntry {
   date: string;
   location: string;
   picture: string;
-  pictureSize: number[];
   skills: Skill[];
   title: string;
   url?: string;

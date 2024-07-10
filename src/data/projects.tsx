@@ -6,7 +6,6 @@ const eucFinder: ProjectEntry = {
   date: '2022 - Ongoing',
   location: MAD,
   picture: '/projects/eucfinder.svg',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -55,7 +54,6 @@ const characterArena: ProjectEntry = {
   date: '2017 - 2021',
   location: MAD,
   picture: '/projects/characterarena.png',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -99,7 +97,6 @@ const ngConsole: ProjectEntry = {
   date: '2015',
   location: MDX,
   picture: '/projects/ngconsole.png',
-  pictureSize: [256, 256],
   skills: ['Angular JS', 'CSS', 'Gulp', 'HTML', 'Javascript'],
   title: 'ngConsole',
   children: (
@@ -126,7 +123,6 @@ const materialCss: ProjectEntry = {
   date: '2014',
   location: MDX,
   picture: '/projects/materialcss.png',
-  pictureSize: [256, 256],
   skills: ['CSS', 'Javascript'],
   title: 'Material CSS',
   children: (
@@ -158,7 +154,6 @@ const monopolyOnline: ProjectEntry = {
   date: '2012 - 2013',
   location: LPA,
   picture: '/projects/monopolyonline.png',
-  pictureSize: [256, 256],
   skills: ['CSS', 'HTML', 'Javascript', 'MySQL', 'PHP'],
   title: 'Monopoly Online',
   children: (

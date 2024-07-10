@@ -10,7 +10,6 @@ const cognizant2: ProjectEntry = {
   date: '2022',
   location: MAD,
   picture: '/companies/cognizant.png',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -56,7 +55,6 @@ const mimacom: ProjectEntry = {
   date: '2020',
   location: MAD,
   picture: '/companies/mimacom.svg',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -103,7 +101,6 @@ const cognizant1: ProjectEntry = {
   date: '2019',
   location: MAD,
   picture: '/companies/cognizant.png',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -142,7 +139,6 @@ const tuenti: ProjectEntry = {
   date: '2018',
   location: MAD,
   picture: '/companies/tuenti.png',
-  pictureSize: [256, 256],
   skills: [
     'Axios',
     'CSS',
@@ -191,7 +187,6 @@ const samyRoad: ProjectEntry = {
   date: '2016',
   location: MAD,
   picture: '/companies/samyroad.png',
-  pictureSize: [256, 140],
   skills: [
     'Axios',
     'Bootstrap',
@@ -235,7 +230,6 @@ const sparkDigital: ProjectEntry = {
   date: '2015',
   location: MDX,
   picture: '/companies/sparkdigital.png',
-  pictureSize: [256, 44],
   skills: [
     'Angular JS',
     'CSS',
@@ -270,7 +264,6 @@ const globant: ProjectEntry = {
   date: '2014',
   location: MDX,
   picture: '/companies/globant.png',
-  pictureSize: [256, 44],
   skills: [
     'Angular JS',
     'BackboneJS',
