@@ -11,19 +11,12 @@ import Messenger from './components/Messenger';
 import ScrollToTop from './components/ScrollToTop';
 import { AppLayoutContent, AppLayoutWrapper } from './styles';
 
-const registerServiceWorker = async () => {
-  if (process.env.NODE_ENV !== 'development' && 'serviceWorker' in navigator) {
-    await navigator.serviceWorker.register('/service-worker.js');
-  }
-};
-
 const AppLayout = ({ children }: PropsWithChildren): JSX.Element => {
   const pathname = usePathname();
 
   useEffect(() => {
     initialize();
     clearOldCaches(version);
-    registerServiceWorker();
   }, []);
 
   useEffect(() => {
