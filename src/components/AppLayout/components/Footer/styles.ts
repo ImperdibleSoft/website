@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { footerHeight, gray, maxWidth, white } from '../../../../constants';
+import { gray, maxWidth, white } from '../../../../constants';
 
 export const FooterWrapper = styled.footer`
   background-color: ${white};
   display: block;
-  height: ${footerHeight}px;
   margin: 0 auto;
   max-width: ${maxWidth};
   padding: 8px 16px;

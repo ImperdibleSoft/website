@@ -1,11 +1,20 @@
 import React from 'react';
-import { NAME, version } from '../../../../constants';
+import { NAME, repository, version } from '../../../../constants';
+import { renderIcon } from '../../../../utils';
+import Link from '../../../Link';
 import { FooterWrapper } from './styles';
 
 const Footer = (): JSX.Element => (
   <FooterWrapper>
     <p>
-      Copyright &copy; {new Date().getFullYear()} {NAME} | v{version}
+      {NAME} &ndash; Copyright &copy; 2012 &ndash; {new Date().getFullYear()}{' '}
+    </p>
+
+    <p>
+      <Link href={repository} target="_blank">
+        {renderIcon('Github')} Source code
+      </Link>{' '}
+      &ndash; v{version}
     </p>
   </FooterWrapper>
 );
