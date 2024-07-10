@@ -1,10 +1,8 @@
-export {
-  appName,
-  description,
-  version,
-  siteName,
-  trackingId
-} from './project-info.json';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const projectInfo = require('./project-info.json');
+
+export const { appName, description, version, siteName, trackingId } =
+  projectInfo;
 
 export const NAME = 'Rafael Pérez García';
 export const JOB = 'Frontend Developer';
