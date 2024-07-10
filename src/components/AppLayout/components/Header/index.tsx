@@ -23,7 +23,7 @@ const Header = (): JSX.Element => (
               logClick(mainNavigationTracking);
             }}
           >
-            <HeaderLogo alt="" src="/logo.png" />
+            <HeaderLogo alt="" src="/logo_transparent.png" />
             <HeaderLogotype alt="" src="/logotype.png" />
           </HeaderNavItemLink>
         </HeaderNavItem>
