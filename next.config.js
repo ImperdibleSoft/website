@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const nextPWA = require('next-pwa');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { appName, version } = require('./src/constants/project-info.json');
+const { name: appName, version } = require('./package.json');
 
 const configDomain = '*.imperdiblesoft.com';
 console.log(`[${appName}] Building NextJS app v${version}`);

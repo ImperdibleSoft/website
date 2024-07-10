@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import { join } from 'path';
-import { brand } from '../../src/constants';
+import { brand } from '../../src/constants/styles';
 import { commonManifestProps, manifestFileName } from '../constants';
 import { getManifestIcons } from './icons';
 
