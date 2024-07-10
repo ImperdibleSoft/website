@@ -11,9 +11,7 @@ export const grayDarker = '#333';
 export const black = '#111';
 
 // Branding
-export const brand = '#32853f';
-export const brandLighter = `lighten(${brand}, 15)`;
-export const brandDarker = `darken(${brand}, 15)`;
+export const brand = '#008636';
 
 export const alt = '#ec6653';
 export const altLighter = 'lighten($alt, 15)';
