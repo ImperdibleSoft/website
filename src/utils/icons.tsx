@@ -143,6 +143,8 @@ const getIconProp = (
       return '/logos/express.png';
     case 'FlowType':
       return '/logos/flowtype.png';
+    case 'Flutter':
+      return '/logos/flutter.svg';
     case 'ImperdibleSoft':
       return '/logo.png';
     case 'JasmineJS':

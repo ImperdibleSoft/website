@@ -11,6 +11,7 @@ const eucFinder: ProjectEntry = {
     'CSS',
     'Eslint',
     'ExpressJS',
+    'Flutter',
     'Git',
     'HTML',
     'Javascript',

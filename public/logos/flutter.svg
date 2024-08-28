@@ -1,0 +1,23 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="P" gradientUnits="userSpaceOnUse" />
+    <linearGradient id="g1" x2="1" href="#P"
+      gradientTransform="matrix(2.736,2.736,-19.352,19.352,70.856,103.348)">
+      <stop offset=".2" stop-opacity=".15" />
+      <stop offset=".85" stop-color="#616161" stop-opacity=".01" />
+    </linearGradient>
+    <linearGradient id="g2" x2="1" href="#P"
+      gradientTransform="matrix(29.127,0,0,19.704,61.044,103.347)">
+      <stop offset=".2" stop-opacity=".55" />
+      <stop offset=".85" stop-color="#616161" stop-opacity=".01" />
+    </linearGradient>
+  </defs>
+  <style>
+    .flutter-a{opacity:.8;fill:#42a5f5}.flutter-b{fill:#0d47a1}.flutter-c{fill:#42a5f5}.flutter-d{fill:url(#g1)}.flutter-e{fill:url(#g2)}</style>
+  <path fill-rule="evenodd" class="flutter-a"
+    d="m31.6 83.7l-19.6-19.7 63.7-64h39.3m-34.3 93.5l-19.7-19.7 14.7-14.8h39.3z" />
+  <path class="flutter-b" d="m61 113.2l14.7 14.8h39.3l-34.3-34.5" />
+  <path class="flutter-c" d="m41.5 93.5l19.6-19.7 19.6 19.7-19.6 19.7z" />
+  <path class="flutter-d" d="m61.1 113.2l19.6-19.7 2.7 2.8-19.6 19.6z" />
+  <path class="flutter-e" d="m61 113.2l29.2-10.1-9.5-9.6" />
+</svg>

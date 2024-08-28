@@ -27,6 +27,7 @@ export const css = '#3b72b6';
 export const javascript = '#cab511';
 export const react = '#5cc1de';
 export const angular2 = '#3d72c8';
+export const flutter = '#0468d7';
 export const redux = '#754abc';
 export const angular = '#de2331';
 export const vue = '#4db084';

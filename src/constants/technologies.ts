@@ -49,6 +49,12 @@ export const skills: SkillSpec[] = [
     highlighted: true
   },
   { name: 'Redux', category: 'framework', relevant: true, highlighted: true },
+  {
+    name: 'Flutter',
+    category: 'framework',
+    relevant: false,
+    highlighted: false
+  },
   { name: 'VueJS', category: 'framework', relevant: false, highlighted: false },
   { name: 'Vuex', category: 'framework', relevant: false, highlighted: false },
   {

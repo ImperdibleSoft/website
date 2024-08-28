@@ -14,6 +14,7 @@ export type Skill =
   | 'Eslint'
   | 'ExpressJS'
   | 'FlowType'
+  | 'Flutter'
   | 'Git'
   | 'Grunt'
   | 'Gulp'

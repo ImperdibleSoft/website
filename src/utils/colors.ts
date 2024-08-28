@@ -14,6 +14,7 @@ import {
   eslint,
   express,
   flowtype,
+  flutter,
   git,
   github,
   grunt,
@@ -81,6 +82,8 @@ export const getItemColor = (item: ListItemLabel): string | undefined => {
       return express;
     case 'FlowType':
       return flowtype;
+    case 'Flutter':
+      return flutter;
     case 'Git':
       return git;
     case 'Github':
