@@ -22,4 +22,4 @@ export const GITHUB = 'https://www.github.com/imperdiblesoft';
 export const MEDIUM = 'https://www.medium.com/imperdiblesoft';
 
 export const CV_LINK =
-  'https://drive.google.com/file/d/0ByBBM9QN-qH4ZzZjMFNzRzRyTWc/view';
+  'https://drive.google.com/file/d/0ByBBM9QN-qH4ZzZjMFNzRzRyTWc/view?usp=drivesdk&resourcekey=0-bp-cDwHApl-jQ2TsPjYF5g';
