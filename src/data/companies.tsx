@@ -16,6 +16,7 @@ const cognizant2: ProjectEntry = {
     'Cypress',
     'Eslint',
     'ExpressJS',
+    'Flutter'
     'Git',
     'HTML',
     'Javascript',
