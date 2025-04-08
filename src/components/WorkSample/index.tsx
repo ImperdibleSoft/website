@@ -32,11 +32,6 @@ const WorkSample = ({
   const sortedSkills = [...projectSkills]
     .sort()
     .map((name) => <SkillTag key={name} margin right={right} skill={name} />);
-  // const sortedSkills = skills
-  //   .filter((t) => projectSkills.includes(t.name))
-  //   .map(({ name }) => (
-  //     <SkillTag key={name} margin right={right} skill={name} />
-  //   ));
 
   return (
     <WorkSampleWrapper $right={right}>
@@ -48,7 +43,11 @@ const WorkSample = ({
         <Heading $size="xs">{title}</Heading>
 
         <p>
-          {renderIcon('calendar')} {date} - {renderIcon('location')} {location}
+          {renderIcon('calendar')} {date}
+        </p>
+
+        <p>
+          {renderIcon('location')} {location}
         </p>
 
         {!!url && (
